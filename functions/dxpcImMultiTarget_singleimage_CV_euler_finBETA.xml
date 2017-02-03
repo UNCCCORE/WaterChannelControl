@@ -1,0 +1,3483 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+	<SubSystem>
+		<Name>Atomic Subsystem</Name>
+		<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/Atomic Subsystem</xPCName>
+		<block>
+			<blkName>Image Transmit</blkName>
+			<xpcblkName>Atomic Subsystem/Image Transmit</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/Atomic Subsystem/Image Transmit</SLblockPath>
+			<isSrc>[0 2 0]</isSrc>
+			<parameter>
+				<paramName>P1</paramName>
+				<dim>[1, 15]</dim>
+			</parameter>
+			<parameter>
+				<paramName>P2</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+			<parameter>
+				<paramName>P3</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+			<parameter>
+				<paramName>P4</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+			<parameter>
+				<paramName>P5</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+			<parameter>
+				<paramName>P6</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>Jpeg Compression</blkName>
+			<xpcblkName>Atomic Subsystem/Jpeg Compression</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/Atomic Subsystem/Jpeg Compression</SLblockPath>
+			<isSrc>[0 1 2]</isSrc>
+			<parameter>
+				<paramName>P1</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+			<parameter>
+				<paramName>P2</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+			<parameter>
+				<paramName>P3</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+			<parameter>
+				<paramName>P4</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+			<parameter>
+				<paramName>P5</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<signal>
+			<sigName>Jpeg Compression/p1</sigName>
+			<xpcsigName>Atomic Subsystem/Jpeg Compression/p1</xpcsigName>
+			<sigWidth>2219520</sigWidth>
+			<sigDim>[2219520, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Jpeg Compression/p2</sigName>
+			<xpcsigName>Atomic Subsystem/Jpeg Compression/p2</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+	</SubSystem>
+	<SubSystem>
+		<Name>CamParameters</Name>
+		<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/CamParameters</xPCName>
+		<block>
+			<blkName>view_angle_horiz</blkName>
+			<xpcblkName>CamParameters/view_angle_horiz</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/CamParameters/view_angle_horiz</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>view_angle_vert</blkName>
+			<xpcblkName>CamParameters/view_angle_vert</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/CamParameters/view_angle_vert</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>x_cam_1</blkName>
+			<xpcblkName>CamParameters/x_cam_1</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/CamParameters/x_cam_1</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>x_cam_2</blkName>
+			<xpcblkName>CamParameters/x_cam_2</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/CamParameters/x_cam_2</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>x_cam_3</blkName>
+			<xpcblkName>CamParameters/x_cam_3</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/CamParameters/x_cam_3</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>y_cam_1</blkName>
+			<xpcblkName>CamParameters/y_cam_1</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/CamParameters/y_cam_1</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>y_cam_2</blkName>
+			<xpcblkName>CamParameters/y_cam_2</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/CamParameters/y_cam_2</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>y_cam_3</blkName>
+			<xpcblkName>CamParameters/y_cam_3</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/CamParameters/y_cam_3</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>z_cam_1</blkName>
+			<xpcblkName>CamParameters/z_cam_1</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/CamParameters/z_cam_1</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>z_cam_2</blkName>
+			<xpcblkName>CamParameters/z_cam_2</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/CamParameters/z_cam_2</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>z_cam_3</blkName>
+			<xpcblkName>CamParameters/z_cam_3</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/CamParameters/z_cam_3</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<signal>
+			<sigName>view_angle_horiz</sigName>
+			<xpcsigName>CamParameters/view_angle_horiz</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>view_angle_vert</sigName>
+			<xpcsigName>CamParameters/view_angle_vert</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>x_cam_1</sigName>
+			<xpcsigName>CamParameters/x_cam_1</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>x_cam_2</sigName>
+			<xpcsigName>CamParameters/x_cam_2</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>x_cam_3</sigName>
+			<xpcsigName>CamParameters/x_cam_3</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>y_cam_1</sigName>
+			<xpcsigName>CamParameters/y_cam_1</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>y_cam_2</sigName>
+			<xpcsigName>CamParameters/y_cam_2</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>y_cam_3</sigName>
+			<xpcsigName>CamParameters/y_cam_3</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>z_cam_1</sigName>
+			<xpcsigName>CamParameters/z_cam_1</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>z_cam_2</sigName>
+			<xpcsigName>CamParameters/z_cam_2</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>z_cam_3</sigName>
+			<xpcsigName>CamParameters/z_cam_3</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+	</SubSystem>
+	<SubSystem>
+		<Name>Commands</Name>
+		<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/Commands</xPCName>
+	</SubSystem>
+	<SubSystem>
+		<Name>alt_controlFCN</Name>
+		<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/alt_controlFCN</xPCName>
+		<block>
+			<blkName>kd_alt</blkName>
+			<xpcblkName>alt_controlFCN/kd_alt</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/alt_controlFCN/kd_alt</SLblockPath>
+			<isSrc>[0 1 1]</isSrc>
+			<parameter>
+				<paramName>Gain</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>kp_alt</blkName>
+			<xpcblkName>alt_controlFCN/kp_alt</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/alt_controlFCN/kp_alt</SLblockPath>
+			<isSrc>[0 1 1]</isSrc>
+			<parameter>
+				<paramName>Gain</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>tau_alt</blkName>
+			<xpcblkName>alt_controlFCN/tau_alt</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/alt_controlFCN/tau_alt</SLblockPath>
+			<isSrc>[0 1 1]</isSrc>
+			<parameter>
+				<paramName>Gain</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>Integrator</blkName>
+			<xpcblkName>alt_controlFCN/Integrator</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/alt_controlFCN/Integrator</SLblockPath>
+			<isSrc>[0 1 1]</isSrc>
+			<parameter>
+				<paramName>InitialCondition</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<signal>
+			<sigName>Derivative</sigName>
+			<xpcsigName>alt_controlFCN/Derivative</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>kd_alt</sigName>
+			<xpcsigName>alt_controlFCN/kd_alt</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>kp_alt</sigName>
+			<xpcsigName>alt_controlFCN/kp_alt</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>tau_alt</sigName>
+			<xpcsigName>alt_controlFCN/tau_alt</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Integrator</sigName>
+			<xpcsigName>alt_controlFCN/Integrator</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Add</sigName>
+			<xpcsigName>alt_controlFCN/Add</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Add1</sigName>
+			<xpcsigName>alt_controlFCN/Add1</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+	</SubSystem>
+	<SubSystem>
+		<Name>error_signals</Name>
+		<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/error_signals</xPCName>
+	</SubSystem>
+	<SubSystem>
+		<Name>motorvoltagesscope
+</Name>
+		<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/motorvoltagesscope </xPCName>
+	</SubSystem>
+	<SubSystem>
+		<Name>phi_controlFCN</Name>
+		<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/phi_controlFCN</xPCName>
+		<block>
+			<blkName>kd_phi</blkName>
+			<xpcblkName>phi_controlFCN/kd_phi</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/phi_controlFCN/kd_phi</SLblockPath>
+			<isSrc>[0 1 1]</isSrc>
+			<parameter>
+				<paramName>Gain</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>kp_phi</blkName>
+			<xpcblkName>phi_controlFCN/kp_phi</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/phi_controlFCN/kp_phi</SLblockPath>
+			<isSrc>[0 1 1]</isSrc>
+			<parameter>
+				<paramName>Gain</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>tau_phi</blkName>
+			<xpcblkName>phi_controlFCN/tau_phi</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/phi_controlFCN/tau_phi</SLblockPath>
+			<isSrc>[0 1 1]</isSrc>
+			<parameter>
+				<paramName>Gain</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>Integrator</blkName>
+			<xpcblkName>phi_controlFCN/Integrator</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/phi_controlFCN/Integrator</SLblockPath>
+			<isSrc>[0 1 1]</isSrc>
+			<parameter>
+				<paramName>InitialCondition</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<signal>
+			<sigName>Derivative</sigName>
+			<xpcsigName>phi_controlFCN/Derivative</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>kd_phi</sigName>
+			<xpcsigName>phi_controlFCN/kd_phi</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>kp_phi</sigName>
+			<xpcsigName>phi_controlFCN/kp_phi</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>tau_phi</sigName>
+			<xpcsigName>phi_controlFCN/tau_phi</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Integrator</sigName>
+			<xpcsigName>phi_controlFCN/Integrator</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Add</sigName>
+			<xpcsigName>phi_controlFCN/Add</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Add1</sigName>
+			<xpcsigName>phi_controlFCN/Add1</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+	</SubSystem>
+	<SubSystem>
+		<Name>pitch_cam_horiz_dots</Name>
+		<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots</xPCName>
+		<SubSystem>
+			<Name>Dot_detector_pitch</Name>
+			<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/Dot_detector_pitch</xPCName>
+		</SubSystem>
+		<SubSystem>
+			<Name>convertAbsolutePositionToCM</Name>
+			<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/convertAbsolutePositionToCM</xPCName>
+		</SubSystem>
+		<SubSystem>
+			<Name>convertPixelsToCM</Name>
+			<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/convertPixelsToCM</xPCName>
+		</SubSystem>
+		<SubSystem>
+			<Name>distanceToCenterOfMass</Name>
+			<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/distanceToCenterOfMass</xPCName>
+		</SubSystem>
+		<block>
+			<blkName>E</blkName>
+			<xpcblkName>pitch_cam_horiz_dots/E</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/E</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>Unused1</blkName>
+			<xpcblkName>pitch_cam_horiz_dots/Unused1</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/Unused1</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>Unused2</blkName>
+			<xpcblkName>pitch_cam_horiz_dots/Unused2</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/Unused2</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>allOnOff</blkName>
+			<xpcblkName>pitch_cam_horiz_dots/allOnOff</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/allOnOff</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>centroidOverrideCommand</blkName>
+			<xpcblkName>pitch_cam_horiz_dots/centroidOverrideCommand</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/centroidOverrideCommand</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>densityThreshold</blkName>
+			<xpcblkName>pitch_cam_horiz_dots/densityThreshold</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/densityThreshold</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>dotConfig</blkName>
+			<xpcblkName>pitch_cam_horiz_dots/dotConfig</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/dotConfig</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>horiz_roi_halfheight</blkName>
+			<xpcblkName>pitch_cam_horiz_dots/horiz_roi_halfheight</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/horiz_roi_halfheight</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>horiz_roi_halfwidth</blkName>
+			<xpcblkName>pitch_cam_horiz_dots/horiz_roi_halfwidth</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/horiz_roi_halfwidth</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>locationMethod</blkName>
+			<xpcblkName>pitch_cam_horiz_dots/locationMethod</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/locationMethod</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>mainImgBox</blkName>
+			<xpcblkName>pitch_cam_horiz_dots/mainImgBox</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/mainImgBox</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>mainImgCrosshairs</blkName>
+			<xpcblkName>pitch_cam_horiz_dots/mainImgCrosshairs</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/mainImgCrosshairs</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>mainImgFeatures</blkName>
+			<xpcblkName>pitch_cam_horiz_dots/mainImgFeatures</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/mainImgFeatures</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>maxPts</blkName>
+			<xpcblkName>pitch_cam_horiz_dots/maxPts</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/maxPts</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>minPts</blkName>
+			<xpcblkName>pitch_cam_horiz_dots/minPts</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/minPts</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>threshCrosshairs</blkName>
+			<xpcblkName>pitch_cam_horiz_dots/threshCrosshairs</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/threshCrosshairs</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>threshInset</blkName>
+			<xpcblkName>pitch_cam_horiz_dots/threshInset</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/threshInset</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>vert_roi_halfheight</blkName>
+			<xpcblkName>pitch_cam_horiz_dots/vert_roi_halfheight</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/vert_roi_halfheight</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>vert_roi_halfwidth</blkName>
+			<xpcblkName>pitch_cam_horiz_dots/vert_roi_halfwidth</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/vert_roi_halfwidth</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>xCentroidOverride</blkName>
+			<xpcblkName>pitch_cam_horiz_dots/xCentroidOverride</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/xCentroidOverride</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>yCentroidOverride</blkName>
+			<xpcblkName>pitch_cam_horiz_dots/yCentroidOverride</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/yCentroidOverride</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>Transfer Fcn</blkName>
+			<xpcblkName>pitch_cam_horiz_dots/Transfer Fcn</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/Transfer Fcn</SLblockPath>
+			<isSrc>[0 1 1]</isSrc>
+			<parameter>
+				<paramName>A</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+			<parameter>
+				<paramName>C</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>Delay</blkName>
+			<xpcblkName>pitch_cam_horiz_dots/Delay</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/Delay</SLblockPath>
+			<isSrc>[0 1 1]</isSrc>
+			<parameter>
+				<paramName>DelayLength</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+			<parameter>
+				<paramName>InitialCondition</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>Delay1</blkName>
+			<xpcblkName>pitch_cam_horiz_dots/Delay1</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/Delay1</SLblockPath>
+			<isSrc>[0 1 1]</isSrc>
+			<parameter>
+				<paramName>DelayLength</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+			<parameter>
+				<paramName>InitialCondition</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<signal>
+			<sigName>Dot_detector_pitch/p1</sigName>
+			<xpcsigName>pitch_cam_horiz_dots/Dot_detector_pitch/p1</xpcsigName>
+			<sigWidth>2219520</sigWidth>
+			<sigDim>[1088, 2040]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Dot_detector_pitch/p2</sigName>
+			<xpcsigName>pitch_cam_horiz_dots/Dot_detector_pitch/p2</xpcsigName>
+			<sigWidth>2</sigWidth>
+			<sigDim>[1, 2]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Dot_detector_pitch/p3</sigName>
+			<xpcsigName>pitch_cam_horiz_dots/Dot_detector_pitch/p3</xpcsigName>
+			<sigWidth>2</sigWidth>
+			<sigDim>[1, 2]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Dot_detector_pitch/p4</sigName>
+			<xpcsigName>pitch_cam_horiz_dots/Dot_detector_pitch/p4</xpcsigName>
+			<sigWidth>2</sigWidth>
+			<sigDim>[1, 2]</sigDim>
+		</signal>
+		<signal>
+			<sigName>convertAbsolutePositionToCM/p1</sigName>
+			<xpcsigName>pitch_cam_horiz_dots/convertAbsolutePositionToCM/p1</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>convertAbsolutePositionToCM/p2</sigName>
+			<xpcsigName>pitch_cam_horiz_dots/convertAbsolutePositionToCM/p2</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>convertPixelsToCM/p1</sigName>
+			<xpcsigName>pitch_cam_horiz_dots/convertPixelsToCM/p1</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>convertPixelsToCM/p2</sigName>
+			<xpcsigName>pitch_cam_horiz_dots/convertPixelsToCM/p2</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>distanceToCenterOfMass/p1</sigName>
+			<xpcsigName>pitch_cam_horiz_dots/distanceToCenterOfMass/p1</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>distanceToCenterOfMass/p2</sigName>
+			<xpcsigName>pitch_cam_horiz_dots/distanceToCenterOfMass/p2</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>distanceToCenterOfMass/p3</sigName>
+			<xpcsigName>pitch_cam_horiz_dots/distanceToCenterOfMass/p3</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>distanceToCenterOfMass/p4</sigName>
+			<xpcsigName>pitch_cam_horiz_dots/distanceToCenterOfMass/p4</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Transfer Fcn</sigName>
+			<xpcsigName>pitch_cam_horiz_dots/Transfer Fcn</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Delay</sigName>
+			<xpcsigName>pitch_cam_horiz_dots/Delay</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Delay1</sigName>
+			<xpcsigName>pitch_cam_horiz_dots/Delay1</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+	</SubSystem>
+	<SubSystem>
+		<Name>pitch_cam_vertical_dots</Name>
+		<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots</xPCName>
+		<SubSystem>
+			<Name>Dot_detector_pitch</Name>
+			<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/Dot_detector_pitch</xPCName>
+		</SubSystem>
+		<SubSystem>
+			<Name>MATLAB Function</Name>
+			<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/MATLAB Function</xPCName>
+		</SubSystem>
+		<SubSystem>
+			<Name>convertAbsolutePositionToCM</Name>
+			<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/convertAbsolutePositionToCM</xPCName>
+		</SubSystem>
+		<SubSystem>
+			<Name>convertPixelsToCM</Name>
+			<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/convertPixelsToCM</xPCName>
+		</SubSystem>
+		<block>
+			<blkName>E</blkName>
+			<xpcblkName>pitch_cam_vertical_dots/E</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/E</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>Unused1</blkName>
+			<xpcblkName>pitch_cam_vertical_dots/Unused1</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/Unused1</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>Unused2</blkName>
+			<xpcblkName>pitch_cam_vertical_dots/Unused2</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/Unused2</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>allOnOff</blkName>
+			<xpcblkName>pitch_cam_vertical_dots/allOnOff</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/allOnOff</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>centroidOverrideCommand</blkName>
+			<xpcblkName>pitch_cam_vertical_dots/centroidOverrideCommand</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/centroidOverrideCommand</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>densityThreshold</blkName>
+			<xpcblkName>pitch_cam_vertical_dots/densityThreshold</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/densityThreshold</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>dotConfig</blkName>
+			<xpcblkName>pitch_cam_vertical_dots/dotConfig</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/dotConfig</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>horiz_roi_halfheight</blkName>
+			<xpcblkName>pitch_cam_vertical_dots/horiz_roi_halfheight</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/horiz_roi_halfheight</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>horiz_roi_halfwidth</blkName>
+			<xpcblkName>pitch_cam_vertical_dots/horiz_roi_halfwidth</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/horiz_roi_halfwidth</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>locationMethod</blkName>
+			<xpcblkName>pitch_cam_vertical_dots/locationMethod</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/locationMethod</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>mainImgBox</blkName>
+			<xpcblkName>pitch_cam_vertical_dots/mainImgBox</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/mainImgBox</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>mainImgCrosshairs</blkName>
+			<xpcblkName>pitch_cam_vertical_dots/mainImgCrosshairs</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/mainImgCrosshairs</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>mainImgFeatures</blkName>
+			<xpcblkName>pitch_cam_vertical_dots/mainImgFeatures</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/mainImgFeatures</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>maxPts</blkName>
+			<xpcblkName>pitch_cam_vertical_dots/maxPts</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/maxPts</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>minPts</blkName>
+			<xpcblkName>pitch_cam_vertical_dots/minPts</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/minPts</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>threshCrosshairs</blkName>
+			<xpcblkName>pitch_cam_vertical_dots/threshCrosshairs</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/threshCrosshairs</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>threshInset</blkName>
+			<xpcblkName>pitch_cam_vertical_dots/threshInset</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/threshInset</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>vert_roi_halfheight</blkName>
+			<xpcblkName>pitch_cam_vertical_dots/vert_roi_halfheight</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/vert_roi_halfheight</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>vert_roi_halfwidth</blkName>
+			<xpcblkName>pitch_cam_vertical_dots/vert_roi_halfwidth</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/vert_roi_halfwidth</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>xCentroidOverride</blkName>
+			<xpcblkName>pitch_cam_vertical_dots/xCentroidOverride</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/xCentroidOverride</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>yCentroidOverride</blkName>
+			<xpcblkName>pitch_cam_vertical_dots/yCentroidOverride</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/yCentroidOverride</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>Transfer Fcn</blkName>
+			<xpcblkName>pitch_cam_vertical_dots/Transfer Fcn</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/Transfer Fcn</SLblockPath>
+			<isSrc>[0 1 1]</isSrc>
+			<parameter>
+				<paramName>A</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+			<parameter>
+				<paramName>C</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>Delay10</blkName>
+			<xpcblkName>pitch_cam_vertical_dots/Delay10</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/Delay10</SLblockPath>
+			<isSrc>[0 1 1]</isSrc>
+			<parameter>
+				<paramName>DelayLength</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+			<parameter>
+				<paramName>InitialCondition</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>Delay11</blkName>
+			<xpcblkName>pitch_cam_vertical_dots/Delay11</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/Delay11</SLblockPath>
+			<isSrc>[0 1 1]</isSrc>
+			<parameter>
+				<paramName>DelayLength</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+			<parameter>
+				<paramName>InitialCondition</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<signal>
+			<sigName>Dot_detector_pitch/p1</sigName>
+			<xpcsigName>pitch_cam_vertical_dots/Dot_detector_pitch/p1</xpcsigName>
+			<sigWidth>2219520</sigWidth>
+			<sigDim>[1088, 2040]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Dot_detector_pitch/p2</sigName>
+			<xpcsigName>pitch_cam_vertical_dots/Dot_detector_pitch/p2</xpcsigName>
+			<sigWidth>2</sigWidth>
+			<sigDim>[1, 2]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Dot_detector_pitch/p3</sigName>
+			<xpcsigName>pitch_cam_vertical_dots/Dot_detector_pitch/p3</xpcsigName>
+			<sigWidth>2</sigWidth>
+			<sigDim>[1, 2]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Dot_detector_pitch/p4</sigName>
+			<xpcsigName>pitch_cam_vertical_dots/Dot_detector_pitch/p4</xpcsigName>
+			<sigWidth>2</sigWidth>
+			<sigDim>[1, 2]</sigDim>
+		</signal>
+		<signal>
+			<sigName>MATLAB Function/p1</sigName>
+			<xpcsigName>pitch_cam_vertical_dots/MATLAB Function/p1</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>MATLAB Function/p2</sigName>
+			<xpcsigName>pitch_cam_vertical_dots/MATLAB Function/p2</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>MATLAB Function/p3</sigName>
+			<xpcsigName>pitch_cam_vertical_dots/MATLAB Function/p3</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>MATLAB Function/p4</sigName>
+			<xpcsigName>pitch_cam_vertical_dots/MATLAB Function/p4</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>convertAbsolutePositionToCM/p1</sigName>
+			<xpcsigName>pitch_cam_vertical_dots/convertAbsolutePositionToCM/p1</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>convertAbsolutePositionToCM/p2</sigName>
+			<xpcsigName>pitch_cam_vertical_dots/convertAbsolutePositionToCM/p2</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>convertPixelsToCM/p1</sigName>
+			<xpcsigName>pitch_cam_vertical_dots/convertPixelsToCM/p1</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>convertPixelsToCM/p2</sigName>
+			<xpcsigName>pitch_cam_vertical_dots/convertPixelsToCM/p2</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Transfer Fcn</sigName>
+			<xpcsigName>pitch_cam_vertical_dots/Transfer Fcn</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Delay10</sigName>
+			<xpcsigName>pitch_cam_vertical_dots/Delay10</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Delay11</sigName>
+			<xpcsigName>pitch_cam_vertical_dots/Delay11</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+	</SubSystem>
+	<SubSystem>
+		<Name>roll_slant_cam</Name>
+		<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam</xPCName>
+		<SubSystem>
+			<Name>Dot_detector_pitch</Name>
+			<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/Dot_detector_pitch</xPCName>
+		</SubSystem>
+		<SubSystem>
+			<Name>MATLAB Function</Name>
+			<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/MATLAB Function</xPCName>
+		</SubSystem>
+		<SubSystem>
+			<Name>convertAbsolutePositionToCM</Name>
+			<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/convertAbsolutePositionToCM</xPCName>
+		</SubSystem>
+		<SubSystem>
+			<Name>convertPixelsToCM</Name>
+			<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/convertPixelsToCM</xPCName>
+		</SubSystem>
+		<block>
+			<blkName>E</blkName>
+			<xpcblkName>roll_slant_cam/E</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/E</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>Unused1</blkName>
+			<xpcblkName>roll_slant_cam/Unused1</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/Unused1</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>Unused2</blkName>
+			<xpcblkName>roll_slant_cam/Unused2</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/Unused2</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>allOnOff</blkName>
+			<xpcblkName>roll_slant_cam/allOnOff</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/allOnOff</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>centroidOverrideCommand</blkName>
+			<xpcblkName>roll_slant_cam/centroidOverrideCommand</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/centroidOverrideCommand</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>densityThreshold</blkName>
+			<xpcblkName>roll_slant_cam/densityThreshold</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/densityThreshold</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>dotConfig</blkName>
+			<xpcblkName>roll_slant_cam/dotConfig</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/dotConfig</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>horiz_roi_halfheight</blkName>
+			<xpcblkName>roll_slant_cam/horiz_roi_halfheight</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/horiz_roi_halfheight</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>horiz_roi_halfwidth</blkName>
+			<xpcblkName>roll_slant_cam/horiz_roi_halfwidth</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/horiz_roi_halfwidth</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>locationMethod</blkName>
+			<xpcblkName>roll_slant_cam/locationMethod</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/locationMethod</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>mainImgBox</blkName>
+			<xpcblkName>roll_slant_cam/mainImgBox</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/mainImgBox</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>mainImgCrosshairs</blkName>
+			<xpcblkName>roll_slant_cam/mainImgCrosshairs</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/mainImgCrosshairs</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>mainImgFeatures</blkName>
+			<xpcblkName>roll_slant_cam/mainImgFeatures</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/mainImgFeatures</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>maxPts</blkName>
+			<xpcblkName>roll_slant_cam/maxPts</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/maxPts</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>minPts</blkName>
+			<xpcblkName>roll_slant_cam/minPts</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/minPts</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>threshCrosshairs</blkName>
+			<xpcblkName>roll_slant_cam/threshCrosshairs</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/threshCrosshairs</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>threshInset</blkName>
+			<xpcblkName>roll_slant_cam/threshInset</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/threshInset</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>vert_roi_halfheight</blkName>
+			<xpcblkName>roll_slant_cam/vert_roi_halfheight</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/vert_roi_halfheight</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>vert_roi_halfwidth</blkName>
+			<xpcblkName>roll_slant_cam/vert_roi_halfwidth</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/vert_roi_halfwidth</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>xCentroidOverride</blkName>
+			<xpcblkName>roll_slant_cam/xCentroidOverride</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/xCentroidOverride</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>yCentroidOverride</blkName>
+			<xpcblkName>roll_slant_cam/yCentroidOverride</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/yCentroidOverride</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>Transfer Fcn</blkName>
+			<xpcblkName>roll_slant_cam/Transfer Fcn</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/Transfer Fcn</SLblockPath>
+			<isSrc>[0 1 1]</isSrc>
+			<parameter>
+				<paramName>A</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+			<parameter>
+				<paramName>C</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>Delay6</blkName>
+			<xpcblkName>roll_slant_cam/Delay6</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/Delay6</SLblockPath>
+			<isSrc>[0 1 1]</isSrc>
+			<parameter>
+				<paramName>DelayLength</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+			<parameter>
+				<paramName>InitialCondition</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>Delay7</blkName>
+			<xpcblkName>roll_slant_cam/Delay7</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/Delay7</SLblockPath>
+			<isSrc>[0 1 1]</isSrc>
+			<parameter>
+				<paramName>DelayLength</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+			<parameter>
+				<paramName>InitialCondition</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<signal>
+			<sigName>Dot_detector_pitch/p1</sigName>
+			<xpcsigName>roll_slant_cam/Dot_detector_pitch/p1</xpcsigName>
+			<sigWidth>2219520</sigWidth>
+			<sigDim>[1088, 2040]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Dot_detector_pitch/p2</sigName>
+			<xpcsigName>roll_slant_cam/Dot_detector_pitch/p2</xpcsigName>
+			<sigWidth>2</sigWidth>
+			<sigDim>[1, 2]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Dot_detector_pitch/p3</sigName>
+			<xpcsigName>roll_slant_cam/Dot_detector_pitch/p3</xpcsigName>
+			<sigWidth>2</sigWidth>
+			<sigDim>[1, 2]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Dot_detector_pitch/p4</sigName>
+			<xpcsigName>roll_slant_cam/Dot_detector_pitch/p4</xpcsigName>
+			<sigWidth>2</sigWidth>
+			<sigDim>[1, 2]</sigDim>
+		</signal>
+		<signal>
+			<sigName>MATLAB Function/p1</sigName>
+			<xpcsigName>roll_slant_cam/MATLAB Function/p1</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>MATLAB Function/p2</sigName>
+			<xpcsigName>roll_slant_cam/MATLAB Function/p2</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>MATLAB Function/p3</sigName>
+			<xpcsigName>roll_slant_cam/MATLAB Function/p3</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>MATLAB Function/p4</sigName>
+			<xpcsigName>roll_slant_cam/MATLAB Function/p4</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>convertAbsolutePositionToCM/p1</sigName>
+			<xpcsigName>roll_slant_cam/convertAbsolutePositionToCM/p1</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>convertAbsolutePositionToCM/p2</sigName>
+			<xpcsigName>roll_slant_cam/convertAbsolutePositionToCM/p2</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>convertPixelsToCM/p1</sigName>
+			<xpcsigName>roll_slant_cam/convertPixelsToCM/p1</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>convertPixelsToCM/p2</sigName>
+			<xpcsigName>roll_slant_cam/convertPixelsToCM/p2</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Transfer Fcn</sigName>
+			<xpcsigName>roll_slant_cam/Transfer Fcn</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+			<sigLabel>d_cam2</sigLabel>
+		</signal>
+		<signal>
+			<sigName>Delay6</sigName>
+			<xpcsigName>roll_slant_cam/Delay6</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Delay7</sigName>
+			<xpcsigName>roll_slant_cam/Delay7</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+	</SubSystem>
+	<SubSystem>
+		<Name>rollpitchyawscope</Name>
+		<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/rollpitchyawscope</xPCName>
+	</SubSystem>
+	<SubSystem>
+		<Name>theta_controlFCN</Name>
+		<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/theta_controlFCN</xPCName>
+		<block>
+			<blkName>kd_theta</blkName>
+			<xpcblkName>theta_controlFCN/kd_theta</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/theta_controlFCN/kd_theta</SLblockPath>
+			<isSrc>[0 1 1]</isSrc>
+			<parameter>
+				<paramName>Gain</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>kp_theta</blkName>
+			<xpcblkName>theta_controlFCN/kp_theta</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/theta_controlFCN/kp_theta</SLblockPath>
+			<isSrc>[0 1 1]</isSrc>
+			<parameter>
+				<paramName>Gain</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>tau_theta</blkName>
+			<xpcblkName>theta_controlFCN/tau_theta</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/theta_controlFCN/tau_theta</SLblockPath>
+			<isSrc>[0 1 1]</isSrc>
+			<parameter>
+				<paramName>Gain</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>Integrator</blkName>
+			<xpcblkName>theta_controlFCN/Integrator</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/theta_controlFCN/Integrator</SLblockPath>
+			<isSrc>[0 1 1]</isSrc>
+			<parameter>
+				<paramName>InitialCondition</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<signal>
+			<sigName>Derivative</sigName>
+			<xpcsigName>theta_controlFCN/Derivative</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>kd_theta</sigName>
+			<xpcsigName>theta_controlFCN/kd_theta</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>kp_theta</sigName>
+			<xpcsigName>theta_controlFCN/kp_theta</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>tau_theta</sigName>
+			<xpcsigName>theta_controlFCN/tau_theta</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Integrator</sigName>
+			<xpcsigName>theta_controlFCN/Integrator</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Add</sigName>
+			<xpcsigName>theta_controlFCN/Add</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Add1</sigName>
+			<xpcsigName>theta_controlFCN/Add1</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+	</SubSystem>
+	<SubSystem>
+		<Name>yaw_cam</Name>
+		<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam</xPCName>
+		<SubSystem>
+			<Name>Dot_detector_pitch</Name>
+			<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/Dot_detector_pitch</xPCName>
+		</SubSystem>
+		<SubSystem>
+			<Name>MATLAB Function</Name>
+			<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/MATLAB Function</xPCName>
+		</SubSystem>
+		<SubSystem>
+			<Name>convertAbsolutePositionToCM</Name>
+			<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/convertAbsolutePositionToCM</xPCName>
+		</SubSystem>
+		<SubSystem>
+			<Name>convertPixelsToCM</Name>
+			<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/convertPixelsToCM</xPCName>
+		</SubSystem>
+		<block>
+			<blkName>E</blkName>
+			<xpcblkName>yaw_cam/E</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/E</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>Unused1</blkName>
+			<xpcblkName>yaw_cam/Unused1</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/Unused1</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>Unused2</blkName>
+			<xpcblkName>yaw_cam/Unused2</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/Unused2</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>allOnOff</blkName>
+			<xpcblkName>yaw_cam/allOnOff</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/allOnOff</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>centroidOverrideCommand</blkName>
+			<xpcblkName>yaw_cam/centroidOverrideCommand</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/centroidOverrideCommand</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>densityThreshold</blkName>
+			<xpcblkName>yaw_cam/densityThreshold</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/densityThreshold</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>dotConfig</blkName>
+			<xpcblkName>yaw_cam/dotConfig</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/dotConfig</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>horiz_roi_halfheight</blkName>
+			<xpcblkName>yaw_cam/horiz_roi_halfheight</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/horiz_roi_halfheight</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>horiz_roi_halfwidth</blkName>
+			<xpcblkName>yaw_cam/horiz_roi_halfwidth</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/horiz_roi_halfwidth</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>locationMethod</blkName>
+			<xpcblkName>yaw_cam/locationMethod</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/locationMethod</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>mainImgBox</blkName>
+			<xpcblkName>yaw_cam/mainImgBox</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/mainImgBox</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>mainImgCrosshairs</blkName>
+			<xpcblkName>yaw_cam/mainImgCrosshairs</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/mainImgCrosshairs</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>mainImgFeatures</blkName>
+			<xpcblkName>yaw_cam/mainImgFeatures</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/mainImgFeatures</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>maxPts</blkName>
+			<xpcblkName>yaw_cam/maxPts</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/maxPts</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>minPts</blkName>
+			<xpcblkName>yaw_cam/minPts</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/minPts</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>threshCrosshairs</blkName>
+			<xpcblkName>yaw_cam/threshCrosshairs</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/threshCrosshairs</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>threshInset</blkName>
+			<xpcblkName>yaw_cam/threshInset</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/threshInset</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>vert_roi_halfheight</blkName>
+			<xpcblkName>yaw_cam/vert_roi_halfheight</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/vert_roi_halfheight</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>vert_roi_halfwidth</blkName>
+			<xpcblkName>yaw_cam/vert_roi_halfwidth</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/vert_roi_halfwidth</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>xCentroidOverride</blkName>
+			<xpcblkName>yaw_cam/xCentroidOverride</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/xCentroidOverride</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>yCentroidOverride</blkName>
+			<xpcblkName>yaw_cam/yCentroidOverride</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/yCentroidOverride</SLblockPath>
+			<isSrc>[1 0 1]</isSrc>
+			<parameter>
+				<paramName>Value</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>Transfer Fcn</blkName>
+			<xpcblkName>yaw_cam/Transfer Fcn</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/Transfer Fcn</SLblockPath>
+			<isSrc>[0 1 1]</isSrc>
+			<parameter>
+				<paramName>A</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+			<parameter>
+				<paramName>C</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>Delay12</blkName>
+			<xpcblkName>yaw_cam/Delay12</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/Delay12</SLblockPath>
+			<isSrc>[0 1 1]</isSrc>
+			<parameter>
+				<paramName>DelayLength</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+			<parameter>
+				<paramName>InitialCondition</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<block>
+			<blkName>Delay13</blkName>
+			<xpcblkName>yaw_cam/Delay13</xpcblkName>
+			<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/Delay13</SLblockPath>
+			<isSrc>[0 1 1]</isSrc>
+			<parameter>
+				<paramName>DelayLength</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+			<parameter>
+				<paramName>InitialCondition</paramName>
+				<dim>[1, 1]</dim>
+			</parameter>
+		</block>
+		<signal>
+			<sigName>Dot_detector_pitch/p1</sigName>
+			<xpcsigName>yaw_cam/Dot_detector_pitch/p1</xpcsigName>
+			<sigWidth>2219520</sigWidth>
+			<sigDim>[1088, 2040]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Dot_detector_pitch/p2</sigName>
+			<xpcsigName>yaw_cam/Dot_detector_pitch/p2</xpcsigName>
+			<sigWidth>2</sigWidth>
+			<sigDim>[1, 2]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Dot_detector_pitch/p3</sigName>
+			<xpcsigName>yaw_cam/Dot_detector_pitch/p3</xpcsigName>
+			<sigWidth>2</sigWidth>
+			<sigDim>[1, 2]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Dot_detector_pitch/p4</sigName>
+			<xpcsigName>yaw_cam/Dot_detector_pitch/p4</xpcsigName>
+			<sigWidth>2</sigWidth>
+			<sigDim>[1, 2]</sigDim>
+		</signal>
+		<signal>
+			<sigName>MATLAB Function/p1</sigName>
+			<xpcsigName>yaw_cam/MATLAB Function/p1</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>MATLAB Function/p2</sigName>
+			<xpcsigName>yaw_cam/MATLAB Function/p2</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>MATLAB Function/p3</sigName>
+			<xpcsigName>yaw_cam/MATLAB Function/p3</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>MATLAB Function/p4</sigName>
+			<xpcsigName>yaw_cam/MATLAB Function/p4</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>convertAbsolutePositionToCM/p1</sigName>
+			<xpcsigName>yaw_cam/convertAbsolutePositionToCM/p1</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>convertAbsolutePositionToCM/p2</sigName>
+			<xpcsigName>yaw_cam/convertAbsolutePositionToCM/p2</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+			<sigLabel>&lt;y_cm&gt;</sigLabel>
+		</signal>
+		<signal>
+			<sigName>convertPixelsToCM/p1</sigName>
+			<xpcsigName>yaw_cam/convertPixelsToCM/p1</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>convertPixelsToCM/p2</sigName>
+			<xpcsigName>yaw_cam/convertPixelsToCM/p2</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+			<sigLabel>&lt;delta_y_cm&gt;</sigLabel>
+		</signal>
+		<signal>
+			<sigName>Transfer Fcn</sigName>
+			<xpcsigName>yaw_cam/Transfer Fcn</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+			<sigLabel>dcam3</sigLabel>
+		</signal>
+		<signal>
+			<sigName>Delay12</sigName>
+			<xpcsigName>yaw_cam/Delay12</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+		<signal>
+			<sigName>Delay13</sigName>
+			<xpcsigName>yaw_cam/Delay13</xpcsigName>
+			<sigWidth>1</sigWidth>
+			<sigDim>[1, 1]</sigDim>
+		</signal>
+	</SubSystem>
+	<SubSystem>
+		<Name>Closed_Lopp_Roll_Set_Pt_Generator</Name>
+		<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/Closed_Lopp_Roll_Set_Pt_Generator</xPCName>
+	</SubSystem>
+	<SubSystem>
+		<Name>MATLAB Function</Name>
+		<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/MATLAB Function</xPCName>
+	</SubSystem>
+	<SubSystem>
+		<Name>Open_Loop_Set_Pt_Generator</Name>
+		<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/Open_Loop_Set_Pt_Generator</xPCName>
+	</SubSystem>
+	<SubSystem>
+		<Name>power_factor</Name>
+		<xPCName>dxpcImMultiTarget_singleimage_CV_euler_finBETA/power_factor</xPCName>
+	</SubSystem>
+	<block>
+		<blkName>CameraConfig</blkName>
+		<xpcblkName>CameraConfig</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/CameraConfig</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>Value</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>Constant1</blkName>
+		<xpcblkName>Constant1</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/Constant1</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>Value</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>DrivingAmplitude</blkName>
+		<xpcblkName>DrivingAmplitude</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/DrivingAmplitude</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>Value</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>DrivingFrequency</blkName>
+		<xpcblkName>DrivingFrequency</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/DrivingFrequency</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>Value</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>OpenLoopOverride</blkName>
+		<xpcblkName>OpenLoopOverride</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/OpenLoopOverride</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>Value</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>V_offset</blkName>
+		<xpcblkName>V_offset</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/V_offset</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>Value</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>V_offset1</blkName>
+		<xpcblkName>V_offset1</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/V_offset1</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>Value</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>V_offset2</blkName>
+		<xpcblkName>V_offset2</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/V_offset2</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>Value</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>aft_port_command</blkName>
+		<xpcblkName>aft_port_command</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/aft_port_command</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>Value</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>aft_port_m_comm</blkName>
+		<xpcblkName>aft_port_m_comm</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/aft_port_m_comm</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>Value</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>aft_starboard_command</blkName>
+		<xpcblkName>aft_starboard_command</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/aft_starboard_command</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>Value</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>aft_starboard_m_comm</blkName>
+		<xpcblkName>aft_starboard_m_comm</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/aft_starboard_m_comm</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>Value</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>control_mode</blkName>
+		<xpcblkName>control_mode</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/control_mode</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>Value</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>forward_command</blkName>
+		<xpcblkName>forward_command</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/forward_command</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>Value</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>forward_m_comm</blkName>
+		<xpcblkName>forward_m_comm</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/forward_m_comm</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>Value</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>img_con</blkName>
+		<xpcblkName>img_con</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/img_con</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>Value</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>man_attitude</blkName>
+		<xpcblkName>man_attitude</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/man_attitude</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>Value</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>man_motor</blkName>
+		<xpcblkName>man_motor</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/man_motor</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>Value</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>phi_amplitude</blkName>
+		<xpcblkName>phi_amplitude</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/phi_amplitude</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>Value</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>phi_control</blkName>
+		<xpcblkName>phi_control</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/phi_control</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>Value</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>phi_des</blkName>
+		<xpcblkName>phi_des</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/phi_des</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>Value</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>phi_frequency</blkName>
+		<xpcblkName>phi_frequency</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/phi_frequency</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>Value</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>signal_type</blkName>
+		<xpcblkName>signal_type</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/signal_type</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>Value</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>tether_config</blkName>
+		<xpcblkName>tether_config</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/tether_config</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>Value</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>theta_des</blkName>
+		<xpcblkName>theta_des</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/theta_des</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>Value</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>vert_dot_offset</blkName>
+		<xpcblkName>vert_dot_offset</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/vert_dot_offset</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>Value</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>water_speed</blkName>
+		<xpcblkName>water_speed</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/water_speed</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>Value</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>z_des</blkName>
+		<xpcblkName>z_des</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/z_des</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>Value</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>Gain</blkName>
+		<xpcblkName>Gain</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/Gain</SLblockPath>
+		<isSrc>[0 1 1]</isSrc>
+		<parameter>
+			<paramName>Gain</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>Gain1</blkName>
+		<xpcblkName>Gain1</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/Gain1</SLblockPath>
+		<isSrc>[0 1 1]</isSrc>
+		<parameter>
+			<paramName>Gain</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>Pitch_[Theta]</blkName>
+		<xpcblkName>Pitch_[Theta]</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/Pitch_[Theta]</SLblockPath>
+		<isSrc>[0 1 1]</isSrc>
+		<parameter>
+			<paramName>Gain</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>Roll_[phi]</blkName>
+		<xpcblkName>Roll_[phi]</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/Roll_[phi]</SLblockPath>
+		<isSrc>[0 1 1]</isSrc>
+		<parameter>
+			<paramName>Gain</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>Yaw_[Psi]</blkName>
+		<xpcblkName>Yaw_[Psi]</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/Yaw_[Psi]</SLblockPath>
+		<isSrc>[0 1 1]</isSrc>
+		<parameter>
+			<paramName>Gain</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>convert_to_rad</blkName>
+		<xpcblkName>convert_to_rad</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/convert_to_rad</SLblockPath>
+		<isSrc>[0 1 1]</isSrc>
+		<parameter>
+			<paramName>Gain</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>convert_to_rad_2</blkName>
+		<xpcblkName>convert_to_rad_2</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/convert_to_rad_2</SLblockPath>
+		<isSrc>[0 1 1]</isSrc>
+		<parameter>
+			<paramName>Gain</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>Rate Limiter</blkName>
+		<xpcblkName>Rate Limiter</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/Rate Limiter</SLblockPath>
+		<isSrc>[0 1 1]</isSrc>
+		<parameter>
+			<paramName>RisingSlewLimit</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>FallingSlewLimit</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>Saturation</blkName>
+		<xpcblkName>Saturation</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/Saturation</SLblockPath>
+		<isSrc>[0 1 1]</isSrc>
+		<parameter>
+			<paramName>UpperLimit</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>LowerLimit</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>Saturation1</blkName>
+		<xpcblkName>Saturation1</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/Saturation1</SLblockPath>
+		<isSrc>[0 1 1]</isSrc>
+		<parameter>
+			<paramName>UpperLimit</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>LowerLimit</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>Saturation2</blkName>
+		<xpcblkName>Saturation2</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/Saturation2</SLblockPath>
+		<isSrc>[0 1 1]</isSrc>
+		<parameter>
+			<paramName>UpperLimit</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>LowerLimit</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>Saturation3</blkName>
+		<xpcblkName>Saturation3</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/Saturation3</SLblockPath>
+		<isSrc>[0 1 1]</isSrc>
+		<parameter>
+			<paramName>UpperLimit</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>LowerLimit</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>Saturation4</blkName>
+		<xpcblkName>Saturation4</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/Saturation4</SLblockPath>
+		<isSrc>[0 1 1]</isSrc>
+		<parameter>
+			<paramName>UpperLimit</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>LowerLimit</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>Saturation5</blkName>
+		<xpcblkName>Saturation5</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/Saturation5</SLblockPath>
+		<isSrc>[0 1 1]</isSrc>
+		<parameter>
+			<paramName>UpperLimit</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>LowerLimit</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>Saturation6</blkName>
+		<xpcblkName>Saturation6</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/Saturation6</SLblockPath>
+		<isSrc>[0 1 1]</isSrc>
+		<parameter>
+			<paramName>UpperLimit</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>LowerLimit</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>Neon CL </blkName>
+		<xpcblkName>Neon CL </xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/Neon CL </SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>P1</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P2</paramName>
+			<dim>[1, 2]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P3</paramName>
+			<dim>[1, 6]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P4</paramName>
+			<dim>[1, 6]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P5</paramName>
+			<dim>[1, 13]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P6</paramName>
+			<dim>[1, 42]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P7</paramName>
+			<dim>[1, 7]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P8</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P9</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P10</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P11</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P12</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P13</paramName>
+			<dim>[1, 486562]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P14</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P15</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P16</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P17</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P18</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P19</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P20</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P21</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P22</paramName>
+			<dim>[1, 2]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P23</paramName>
+			<dim>[28, 2]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P24</paramName>
+			<dim>[1, 13]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P25</paramName>
+			<dim>[1, 3]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P26</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P27</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P28</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P29</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P30</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P31</paramName>
+			<dim>[1, 2]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P32</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>Neon CL 1</blkName>
+		<xpcblkName>Neon CL 1</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/Neon CL 1</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>P1</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P2</paramName>
+			<dim>[1, 2]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P3</paramName>
+			<dim>[1, 6]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P4</paramName>
+			<dim>[1, 6]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P5</paramName>
+			<dim>[1, 13]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P6</paramName>
+			<dim>[1, 42]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P7</paramName>
+			<dim>[1, 7]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P8</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P9</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P10</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P11</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P12</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P13</paramName>
+			<dim>[1, 486562]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P14</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P15</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P16</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P17</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P18</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P19</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P20</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P21</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P22</paramName>
+			<dim>[1, 2]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P23</paramName>
+			<dim>[28, 2]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P24</paramName>
+			<dim>[1, 13]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P25</paramName>
+			<dim>[1, 3]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P26</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P27</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P28</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P29</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P30</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P31</paramName>
+			<dim>[1, 2]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P32</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>Neon CL 2</blkName>
+		<xpcblkName>Neon CL 2</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/Neon CL 2</SLblockPath>
+		<isSrc>[1 0 1]</isSrc>
+		<parameter>
+			<paramName>P1</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P2</paramName>
+			<dim>[1, 2]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P3</paramName>
+			<dim>[1, 6]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P4</paramName>
+			<dim>[1, 6]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P5</paramName>
+			<dim>[1, 13]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P6</paramName>
+			<dim>[1, 42]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P7</paramName>
+			<dim>[1, 7]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P8</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P9</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P10</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P11</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P12</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P13</paramName>
+			<dim>[1, 486562]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P14</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P15</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P16</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P17</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P18</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P19</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P20</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P21</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P22</paramName>
+			<dim>[1, 2]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P23</paramName>
+			<dim>[28, 2]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P24</paramName>
+			<dim>[1, 13]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P25</paramName>
+			<dim>[1, 3]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P26</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P27</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P28</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P29</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P30</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P31</paramName>
+			<dim>[1, 2]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P32</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>PCI-6259 DA</blkName>
+		<xpcblkName>PCI-6259 DA</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/PCI-6259 DA</SLblockPath>
+		<isSrc>[0 4 0]</isSrc>
+		<parameter>
+			<paramName>P1</paramName>
+			<dim>[1, 4]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P2</paramName>
+			<dim>[1, 4]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P3</paramName>
+			<dim>[1, 4]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P4</paramName>
+			<dim>[1, 4]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P5</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P6</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P7</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>Receive</blkName>
+		<xpcblkName>Receive</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/Receive</SLblockPath>
+		<isSrc>[1 0 2]</isSrc>
+		<parameter>
+			<paramName>P1</paramName>
+			<dim>[1, 11]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P2</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P3</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P4</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>P5</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>Transfer Fcn</blkName>
+		<xpcblkName>Transfer Fcn</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/Transfer Fcn</SLblockPath>
+		<isSrc>[0 1 1]</isSrc>
+		<parameter>
+			<paramName>A</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>C</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>D</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>Transfer Fcn1</blkName>
+		<xpcblkName>Transfer Fcn1</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/Transfer Fcn1</SLblockPath>
+		<isSrc>[0 1 1]</isSrc>
+		<parameter>
+			<paramName>A</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>C</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>D</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<block>
+		<blkName>Transfer Fcn2</blkName>
+		<xpcblkName>Transfer Fcn2</xpcblkName>
+		<SLblockPath>dxpcImMultiTarget_singleimage_CV_euler_finBETA/Transfer Fcn2</SLblockPath>
+		<isSrc>[0 1 1]</isSrc>
+		<parameter>
+			<paramName>A</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>C</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+		<parameter>
+			<paramName>D</paramName>
+			<dim>[1, 1]</dim>
+		</parameter>
+	</block>
+	<signal>
+		<sigName>Closed_Lopp_Roll_Set_Pt_Generator</sigName>
+		<xpcsigName>Closed_Lopp_Roll_Set_Pt_Generator</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+		<sigLabel>&lt;set_Pt&gt;</sigLabel>
+	</signal>
+	<signal>
+		<sigName>MATLAB Function/p1</sigName>
+		<xpcsigName>MATLAB Function/p1</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+		<sigLabel>&lt;theta&gt;</sigLabel>
+	</signal>
+	<signal>
+		<sigName>MATLAB Function/p2</sigName>
+		<xpcsigName>MATLAB Function/p2</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+		<sigLabel>&lt;psi&gt;</sigLabel>
+	</signal>
+	<signal>
+		<sigName>MATLAB Function/p3</sigName>
+		<xpcsigName>MATLAB Function/p3</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+		<sigLabel>&lt;phi&gt;</sigLabel>
+	</signal>
+	<signal>
+		<sigName>MATLAB Function/p4</sigName>
+		<xpcsigName>MATLAB Function/p4</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+		<sigLabel>x_cm_ground&lt;x_cm_ground&gt;</sigLabel>
+	</signal>
+	<signal>
+		<sigName>MATLAB Function/p5</sigName>
+		<xpcsigName>MATLAB Function/p5</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+		<sigLabel>y_cm_ground&lt;y_cm_ground&gt;</sigLabel>
+	</signal>
+	<signal>
+		<sigName>MATLAB Function/p6</sigName>
+		<xpcsigName>MATLAB Function/p6</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+		<sigLabel>z_cm_ground&lt;z_cm_ground&gt;</sigLabel>
+	</signal>
+	<signal>
+		<sigName>Open_Loop_Set_Pt_Generator/p1</sigName>
+		<xpcsigName>Open_Loop_Set_Pt_Generator/p1</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+		<sigLabel>&lt;sin1&gt;</sigLabel>
+	</signal>
+	<signal>
+		<sigName>Open_Loop_Set_Pt_Generator/p2</sigName>
+		<xpcsigName>Open_Loop_Set_Pt_Generator/p2</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+		<sigLabel>&lt;sin2&gt;</sigLabel>
+	</signal>
+	<signal>
+		<sigName>power_factor/p1</sigName>
+		<xpcsigName>power_factor/p1</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+		<sigLabel>power_factoor&lt;PF&gt;</sigLabel>
+	</signal>
+	<signal>
+		<sigName>power_factor/p2</sigName>
+		<xpcsigName>power_factor/p2</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+		<sigLabel>&lt;v_apparent&gt;</sigLabel>
+	</signal>
+	<signal>
+		<sigName>Clock</sigName>
+		<xpcsigName>Clock</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Clock1</sigName>
+		<xpcsigName>Clock1</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>CameraConfig</sigName>
+		<xpcsigName>CameraConfig</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>DrivingAmplitude</sigName>
+		<xpcsigName>DrivingAmplitude</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>DrivingFrequency</sigName>
+		<xpcsigName>DrivingFrequency</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>OpenLoopOverride</sigName>
+		<xpcsigName>OpenLoopOverride</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>V_offset</sigName>
+		<xpcsigName>V_offset</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>V_offset1</sigName>
+		<xpcsigName>V_offset1</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>V_offset2</sigName>
+		<xpcsigName>V_offset2</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>aft_port_command</sigName>
+		<xpcsigName>aft_port_command</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>aft_port_m_comm</sigName>
+		<xpcsigName>aft_port_m_comm</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>aft_starboard_command</sigName>
+		<xpcsigName>aft_starboard_command</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>aft_starboard_m_comm</sigName>
+		<xpcsigName>aft_starboard_m_comm</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>phi_amplitude</sigName>
+		<xpcsigName>phi_amplitude</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>phi_control</sigName>
+		<xpcsigName>phi_control</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>phi_des</sigName>
+		<xpcsigName>phi_des</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>phi_frequency</sigName>
+		<xpcsigName>phi_frequency</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>signal_type</sigName>
+		<xpcsigName>signal_type</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>tether_config</sigName>
+		<xpcsigName>tether_config</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>vert_dot_offset</sigName>
+		<xpcsigName>vert_dot_offset</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>water_speed</sigName>
+		<xpcsigName>water_speed</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>z_des</sigName>
+		<xpcsigName>z_des</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Fcn</sigName>
+		<xpcsigName>Fcn</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Fcn1</sigName>
+		<xpcsigName>Fcn1</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Fcn2</sigName>
+		<xpcsigName>Fcn2</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Fcn4</sigName>
+		<xpcsigName>Fcn4</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Fcn6</sigName>
+		<xpcsigName>Fcn6</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Fcn7</sigName>
+		<xpcsigName>Fcn7</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>u_forward</sigName>
+		<xpcsigName>u_forward</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>u_forward1</sigName>
+		<xpcsigName>u_forward1</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>u_port</sigName>
+		<xpcsigName>u_port</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>u_starboard</sigName>
+		<xpcsigName>u_starboard</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Gain</sigName>
+		<xpcsigName>Gain</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Gain1</sigName>
+		<xpcsigName>Gain1</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Pitch_[Theta]</sigName>
+		<xpcsigName>Pitch_[Theta]</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Roll_[phi]</sigName>
+		<xpcsigName>Roll_[phi]</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Yaw_[Psi]</sigName>
+		<xpcsigName>Yaw_[Psi]</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>convert_to_rad</sigName>
+		<xpcsigName>convert_to_rad</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>convert_to_rad_2</sigName>
+		<xpcsigName>convert_to_rad_2</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Multiport
+Switch</sigName>
+		<xpcsigName>Multiport Switch</xpcsigName>
+		<sigWidth>2219520</sigWidth>
+		<sigDim>[1088, 2040]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Multiport
+Switch1</sigName>
+		<xpcsigName>Multiport Switch1</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Multiport
+Switch2</sigName>
+		<xpcsigName>Multiport Switch2</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Multiport
+Switch4</sigName>
+		<xpcsigName>Multiport Switch4</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Product</sigName>
+		<xpcsigName>Product</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Product1</sigName>
+		<xpcsigName>Product1</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Product2</sigName>
+		<xpcsigName>Product2</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Product3</sigName>
+		<xpcsigName>Product3</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Rate Transition</sigName>
+		<xpcsigName>Rate Transition</xpcsigName>
+		<sigWidth>2219520</sigWidth>
+		<sigDim>[1088, 2040]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Rate Limiter</sigName>
+		<xpcsigName>Rate Limiter</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Saturation</sigName>
+		<xpcsigName>Saturation</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+		<sigLabel>center</sigLabel>
+	</signal>
+	<signal>
+		<sigName>Saturation1</sigName>
+		<xpcsigName>Saturation1</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+		<sigLabel>port</sigLabel>
+	</signal>
+	<signal>
+		<sigName>Saturation2</sigName>
+		<xpcsigName>Saturation2</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+		<sigLabel>starboard</sigLabel>
+	</signal>
+	<signal>
+		<sigName>Saturation3</sigName>
+		<xpcsigName>Saturation3</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+		<sigLabel>altCmd</sigLabel>
+	</signal>
+	<signal>
+		<sigName>Saturation4</sigName>
+		<xpcsigName>Saturation4</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Saturation5</sigName>
+		<xpcsigName>Saturation5</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+		<sigLabel>rollCmd</sigLabel>
+	</signal>
+	<signal>
+		<sigName>Saturation6</sigName>
+		<xpcsigName>Saturation6</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Neon CL </sigName>
+		<xpcsigName>Neon CL </xpcsigName>
+		<sigWidth>2219520</sigWidth>
+		<sigDim>[1088, 2040]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Neon CL 1</sigName>
+		<xpcsigName>Neon CL 1</xpcsigName>
+		<sigWidth>2219520</sigWidth>
+		<sigDim>[1088, 2040]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Neon CL 2</sigName>
+		<xpcsigName>Neon CL 2</xpcsigName>
+		<sigWidth>2219520</sigWidth>
+		<sigDim>[1088, 2040]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Receive/p1</sigName>
+		<xpcsigName>Receive/p1</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Receive/p2</sigName>
+		<xpcsigName>Receive/p2</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Add</sigName>
+		<xpcsigName>Add</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Add18</sigName>
+		<xpcsigName>Add18</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+		<sigLabel>e_height</sigLabel>
+	</signal>
+	<signal>
+		<sigName>Add19</sigName>
+		<xpcsigName>Add19</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Add20</sigName>
+		<xpcsigName>Add20</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Add8</sigName>
+		<xpcsigName>Add8</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Add9</sigName>
+		<xpcsigName>Add9</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Transfer Fcn</sigName>
+		<xpcsigName>Transfer Fcn</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Transfer Fcn1</sigName>
+		<xpcsigName>Transfer Fcn1</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+	<signal>
+		<sigName>Transfer Fcn2</sigName>
+		<xpcsigName>Transfer Fcn2</xpcsigName>
+		<sigWidth>1</sigWidth>
+		<sigDim>[1, 1]</sigDim>
+	</signal>
+</Root>
