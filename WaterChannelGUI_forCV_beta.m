@@ -81,7 +81,7 @@ function H_Cent_New_Val_p_Callback(hObject, eventdata, handles)
 
 % Hints: get(hObject,'String') returns contents of H_Cent_New_Val_p as text
 %        str2double(get(hObject,'String')) returns contents of H_Cent_New_Val_p as a double
-set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/xCentroidOverride', 'Value',get(hObject,'String'));
+set_param('targetModel/pitch_cam_horiz_dots/xCentroidOverride', 'Value',get(hObject,'String'));
 
 % --- Executes during object creation, after setting all properties.
 function H_Cent_New_Val_p_CreateFcn(hObject, eventdata, handles)
@@ -94,7 +94,7 @@ function H_Cent_New_Val_p_CreateFcn(hObject, eventdata, handles)
 
 
 if modelIsOpen()
-    set(hObject,'String',get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/xCentroidOverride', 'Value'));
+    set(hObject,'String',get_param('targetModel/pitch_cam_horiz_dots/xCentroidOverride', 'Value'));
 else
     set(hObject,'String','')
 end
@@ -111,7 +111,7 @@ function V_Cent_New_Val_p_Callback(hObject, eventdata, handles)
 
 % Hints: get(hObject,'String') returns contents of V_Cent_New_Val_p as text
 %        str2double(get(hObject,'String')) returns contents of V_Cent_New_Val_p as a double
-set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/yCentroidOverride', 'Value',get(hObject,'String'));
+set_param('targetModel/pitch_cam_horiz_dots/yCentroidOverride', 'Value',get(hObject,'String'));
 
 
 % --- Executes during object creation, after setting all properties.
@@ -123,7 +123,7 @@ function V_Cent_New_Val_p_CreateFcn(hObject, eventdata, handles)
 % Hint: edit controls usually have a white background on Windows.
 %       See ISPC and COMPUTER.
 if modelIsOpen()
-    set(hObject,'String',get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/yCentroidOverride', 'Value'));
+    set(hObject,'String',get_param('targetModel/pitch_cam_horiz_dots/yCentroidOverride', 'Value'));
 else
     set(hObject,'String','')
 end
@@ -139,15 +139,15 @@ function Update_pitch_h_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 if modelIsOpen()
     if strcmp(get(hObject,'String'),'Release')
-        set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/centroidOverrideCommand', 'Value', '0');
+        set_param('targetModel/pitch_cam_horiz_dots/centroidOverrideCommand', 'Value', '0');
         set(hObject,'String','Hold');
     else
         set(hObject,'String','Release');
         H_Cent_p = get(handles.H_Cent_New_Val_p, 'string');
         V_Cent_p = get(handles.V_Cent_New_Val_p, 'string');
-        set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/xCentroidOverride', 'Value', H_Cent_p);
-        set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/yCentroidOverride', 'Value', V_Cent_p);
-        set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/centroidOverrideCommand', 'Value', '1');
+        set_param('targetModel/pitch_cam_horiz_dots/xCentroidOverride', 'Value', H_Cent_p);
+        set_param('targetModel/pitch_cam_horiz_dots/yCentroidOverride', 'Value', V_Cent_p);
+        set_param('targetModel/pitch_cam_horiz_dots/centroidOverrideCommand', 'Value', '1');
     end
 end
 
@@ -174,7 +174,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 if modelIsOpen()
-    x = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/theta_des', 'Value');
+    x = get_param('targetModel/theta_des', 'Value');
     set(hObject,'String',x);
     
 end
@@ -202,7 +202,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 if modelIsOpen()
-    x = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/phi_des', 'Value');
+    x = get_param('targetModel/phi_des', 'Value');
     set(hObject,'String',x);
     
 end
@@ -230,7 +230,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 if modelIsOpen()
-    x = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/z_des', 'Value');
+    x = get_param('targetModel/z_des', 'Value');
     set(hObject,'String',x);
     
 end
@@ -248,12 +248,12 @@ if modelIsOpen()
     phi_amplitude = get(handles.phi_amplitude,'String');
     phi_frequency = get(handles.phi_frequency,'String');
     
-    set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/theta_des', 'Value', theta_des);
-    set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/phi_des', 'Value', phi_des);
-    set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/z_des', 'Value', z_des);
+    set_param('targetModel/theta_des', 'Value', theta_des);
+    set_param('targetModel/phi_des', 'Value', phi_des);
+    set_param('targetModel/z_des', 'Value', z_des);
     
-    set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/phi_amplitude', 'Value', phi_amplitude);
-    set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/phi_frequency', 'Value', phi_frequency);
+    set_param('targetModel/phi_amplitude', 'Value', phi_amplitude);
+    set_param('targetModel/phi_frequency', 'Value', phi_frequency);
 
 end
 
@@ -264,8 +264,8 @@ function Automatic_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 if modelIsOpen()
-    set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/control_mode', 'Value', '1');
-    set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/phi_control', 'Value', '2');
+    set_param('targetModel/control_mode', 'Value', '1');
+    set_param('targetModel/phi_control', 'Value', '2');
 end
 
 
@@ -275,7 +275,7 @@ function Manual_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 if modelIsOpen()
-    set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/control_mode', 'Value', '0');
+    set_param('targetModel/control_mode', 'Value', '0');
 end
 
 
@@ -326,7 +326,7 @@ function theta_kp_Callback(hObject, eventdata, handles)
 %        get(hObject,'Min') and get(hObject,'Max') to determine range of slider
 
 theta_p = get(hObject, 'Value');
-set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/kp_theta', 'Gain', num2str(theta_p));
+set_param('targetModel/kp_theta', 'Gain', num2str(theta_p));
 set(handles.Val4, 'string', theta_p);
 assignin('base','kp_theta', theta_p);
 
@@ -341,7 +341,7 @@ function theta_kd_Callback(hObject, eventdata, handles)
 %        get(hObject,'Min') and get(hObject,'Max') to determine range of slider
 
 theta_d = get(hObject, 'Value');
-set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/kd_theta', 'Gain', num2str(theta_d));
+set_param('targetModel/kd_theta', 'Gain', num2str(theta_d));
 set(handles.Val5, 'string', theta_d);
 assignin('base', 'kd_theta', theta_d);
 
@@ -357,7 +357,7 @@ if isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColo
     set(hObject,'BackgroundColor',[.9 .9 .9]);
 end
 if modelIsOpen()
-    PitchDerivitiveGain = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/kd_theta', 'Gain');
+    PitchDerivitiveGain = get_param('targetModel/kd_theta', 'Gain');
    set(hObject,'Value', str2num(PitchDerivitiveGain));
 end
 
@@ -372,7 +372,7 @@ function theta_tau_Callback(hObject, eventdata, handles)
 %        get(hObject,'Min') and get(hObject,'Max') to determine range of slider
 
 theta_t = get(hObject, 'Value');
-set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/tau_theta', 'Gain', num2str(1/theta_t));
+set_param('targetModel/tau_theta', 'Gain', num2str(1/theta_t));
 set(handles.Val6, 'string', theta_t);
 assignin('base', 'tau_theta', theta_t);
 
@@ -389,7 +389,7 @@ if isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColo
     set(hObject,'BackgroundColor',[.9 .9 .9]);
 end
 if modelIsOpen()
-    PitchTimeConst = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/tau_theta', 'Gain');
+    PitchTimeConst = get_param('targetModel/tau_theta', 'Gain');
    set(hObject,'Value', str2num(PitchTimeConst));
 end
 
@@ -416,7 +416,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 if modelIsOpen()
-    x = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/kp_phi', 'Gain');
+    x = get_param('targetModel/kp_phi', 'Gain');
     set(hObject,'String',x);
     
 end
@@ -444,7 +444,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 if modelIsOpen()
-    x = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/kd_phi', 'Gain');
+    x = get_param('targetModel/kd_phi', 'Gain');
     set(hObject,'String',x);
     
 end
@@ -472,7 +472,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 if modelIsOpen()
-    x = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/tau_phi', 'Gain');
+    x = get_param('targetModel/tau_phi', 'Gain');
     set(hObject,'String',x);
     
 end
@@ -488,7 +488,7 @@ function phi_kp_Callback(hObject, eventdata, handles)
 %        get(hObject,'Min') and get(hObject,'Max') to determine range of slider
 
 phi_p = get(hObject, 'Value');
-set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/kp_phi', 'Gain', num2str(phi_p));
+set_param('targetModel/kp_phi', 'Gain', num2str(phi_p));
 set(handles.Val7, 'string', phi_p);
 assignin('base', 'kp_phi', phi_p);
 
@@ -504,7 +504,7 @@ if isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColo
     set(hObject,'BackgroundColor',[.9 .9 .9]);
 end
 if modelIsOpen()
-   x = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/kp_phi', 'Gain');
+   x = get_param('targetModel/kp_phi', 'Gain');
    set(hObject,'Value', str2double(x));
 end
 
@@ -519,7 +519,7 @@ function phi_kd_Callback(hObject, eventdata, handles)
 %        get(hObject,'Min') and get(hObject,'Max') to determine range of slider
 
 phi_d = get(hObject, 'Value');
-set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/kd_phi', 'Gain', num2str(phi_d));
+set_param('targetModel/kd_phi', 'Gain', num2str(phi_d));
 set(handles.Val8, 'string', phi_d);
 assignin('base', 'kd_phi', phi_d);
 
@@ -536,7 +536,7 @@ if isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColo
     set(hObject,'BackgroundColor',[.9 .9 .9]);
 end
 if modelIsOpen()
-   x = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/kd_phi', 'Gain');
+   x = get_param('targetModel/kd_phi', 'Gain');
    set(hObject,'Value', str2double(x));
 end
 
@@ -551,7 +551,7 @@ function phi_tau_Callback(hObject, eventdata, handles)
 %        get(hObject,'Min') and get(hObject,'Max') to determine range of slider
 
 phi_t = get(hObject, 'Value');
-set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/tau_phi', 'Gain', num2str(1/phi_t));
+set_param('targetModel/tau_phi', 'Gain', num2str(1/phi_t));
 set(handles.Val9, 'string', phi_t);
 assignin('base', 'tau_phi', phi_t);
 
@@ -567,7 +567,7 @@ if isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColo
     set(hObject,'BackgroundColor',[.9 .9 .9]);
 end
 if modelIsOpen()
-   x = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/tau_phi', 'Gain');
+   x = get_param('targetModel/tau_phi', 'Gain');
    set(hObject,'Value', str2double(x));
 end
 
@@ -594,7 +594,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 if modelIsOpen()
-    x = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/kp_alt', 'Gain');
+    x = get_param('targetModel/kp_alt', 'Gain');
     set(hObject,'String',x);
     
 end
@@ -621,7 +621,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 if modelIsOpen()
-    x = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/kd_alt', 'Gain');
+    x = get_param('targetModel/kd_alt', 'Gain');
     set(hObject,'String',x);
     
 end
@@ -648,7 +648,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 if modelIsOpen()
-    x = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/tau_alt', 'Gain');
+    x = get_param('targetModel/tau_alt', 'Gain');
     set(hObject,'String',x);
     
 end
@@ -664,7 +664,7 @@ function z_kp_Callback(hObject, eventdata, handles)
 %        get(hObject,'Min') and get(hObject,'Max') to determine range of slider
 
 z_p = get(hObject, 'Value');
-set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/kp_alt', 'Gain', num2str(z_p));
+set_param('targetModel/kp_alt', 'Gain', num2str(z_p));
 set(handles.Val10, 'string', z_p);
 assignin('base', 'kp_alt', z_p);
 
@@ -681,7 +681,7 @@ if isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColo
     set(hObject,'BackgroundColor',[.9 .9 .9]);
 end
 if modelIsOpen()
-   x = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/kp_alt', 'Gain');
+   x = get_param('targetModel/kp_alt', 'Gain');
    set(hObject,'Value', str2double(x));
 end
 
@@ -696,7 +696,7 @@ function z_kd_Callback(hObject, eventdata, handles)
 %        get(hObject,'Min') and get(hObject,'Max') to determine range of slider
 
 z_d = get(hObject, 'Value');
-set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/kd_alt', 'Gain', num2str(z_d));
+set_param('targetModel/kd_alt', 'Gain', num2str(z_d));
 set(handles.Val11, 'string', z_d);
 assignin('base', 'kd_alt', z_d);
 
@@ -712,7 +712,7 @@ if isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColo
     set(hObject,'BackgroundColor',[.9 .9 .9]);
 end
 if modelIsOpen()
-   x = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/kd_alt', 'Gain');
+   x = get_param('targetModel/kd_alt', 'Gain');
    set(hObject,'Value', str2double(x));
 end
 
@@ -727,7 +727,7 @@ function z_tau_Callback(hObject, eventdata, handles)
 %        get(hObject,'Min') and get(hObject,'Max') to determine range of slider
 
 z_t = get(hObject, 'Value');
-set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/tau_alt', 'Gain', num2str(1/z_t));
+set_param('targetModel/tau_alt', 'Gain', num2str(1/z_t));
 set(handles.Val12, 'string', z_t);
 assignin('base', 'tau_alt', z_t);
 
@@ -743,7 +743,7 @@ if isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColo
     set(hObject,'BackgroundColor',[.9 .9 .9]);
 end
 if modelIsOpen()
-   x = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/tau_alt', 'Gain');
+   x = get_param('targetModel/tau_alt', 'Gain');
    set(hObject,'Value', str2double(x));
 end
 
@@ -762,7 +762,7 @@ function port_comd_Callback(hObject, eventdata, handles)
 
 port_Val = get(hObject, 'Value');
 set(handles.Val14, 'string', port_Val);
-set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/portMotorSpeed', 'Value', num2str(port_Val));
+set_param('targetModel/portMotorSpeed', 'Value', num2str(port_Val));
 
 
 
@@ -789,7 +789,7 @@ function starboard_comd_Callback(hObject, eventdata, handles)
 
 star_Val = get(hObject, 'Value');
 set(handles.Val15, 'string', star_Val);
-set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/starboardMotorSpeed', 'Value', num2str(star_Val));
+set_param('targetModel/starboardMotorSpeed', 'Value', num2str(star_Val));
 
 
 % --- Executes during object creation, after setting all properties.
@@ -815,7 +815,7 @@ function forw_comd_Callback(hObject, eventdata, handles)
 
 forw_Val = get(hObject, 'Value');
 set(handles.Val13, 'string', forw_Val);
-set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/centerMotorSpeed', 'Value', num2str(forw_Val));
+set_param('targetModel/centerMotorSpeed', 'Value', num2str(forw_Val));
 
 
 
@@ -839,7 +839,7 @@ function H_Cent_New_Val_r_Callback(hObject, eventdata, handles)
 
 % Hints: get(hObject,'String') returns contents of H_Cent_New_Val_r as text
 %        str2double(get(hObject,'String')) returns contents of H_Cent_New_Val_r as a double
-set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/xCentroidOverride', 'Value',get(hObject,'String'));
+set_param('targetModel/roll_slant_cam/xCentroidOverride', 'Value',get(hObject,'String'));
 
 
 % --- Executes during object creation, after setting all properties.
@@ -851,7 +851,7 @@ function H_Cent_New_Val_r_CreateFcn(hObject, eventdata, handles)
 % Hint: edit controls usually have a white background on Windows.
 %       See ISPC and COMPUTER.
 if modelIsOpen()
-    set(hObject,'String',get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/xCentroidOverride', 'Value'));
+    set(hObject,'String',get_param('targetModel/roll_slant_cam/xCentroidOverride', 'Value'));
 else
     set(hObject,'String','')
 end
@@ -868,7 +868,7 @@ function V_Cent_New_Val_r_Callback(hObject, eventdata, handles)
 
 % Hints: get(hObject,'String') returns contents of V_Cent_New_Val_r as text
 %        str2double(get(hObject,'String')) returns contents of V_Cent_New_Val_r as a double
-set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/yCentroidOverride', 'Value',get(hObject,'String'));
+set_param('targetModel/roll_slant_cam/yCentroidOverride', 'Value',get(hObject,'String'));
 
 
 % --- Executes during object creation, after setting all properties.
@@ -880,7 +880,7 @@ function V_Cent_New_Val_r_CreateFcn(hObject, eventdata, handles)
 % Hint: edit controls usually have a white background on Windows.
 %       See ISPC and COMPUTER.
 if modelIsOpen()
-    set(hObject,'String',get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/yCentroidOverride', 'Value'));
+    set(hObject,'String',get_param('targetModel/roll_slant_cam/yCentroidOverride', 'Value'));
 else
     set(hObject,'String','')
 end
@@ -897,7 +897,7 @@ function H_Cent_New_Val_y_Callback(hObject, eventdata, handles)
 
 % Hints: get(hObject,'String') returns contents of H_Cent_New_Val_y as text
 %        str2double(get(hObject,'String')) returns contents of H_Cent_New_Val_y as a double
-set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/xCentroidOverride', 'Value',get(hObject,'String'));
+set_param('targetModel/yaw_cam/xCentroidOverride', 'Value',get(hObject,'String'));
 
 
 % --- Executes during object creation, after setting all properties.
@@ -909,7 +909,7 @@ function H_Cent_New_Val_y_CreateFcn(hObject, eventdata, handles)
 % Hint: edit controls usually have a white background on Windows.
 %       See ISPC and COMPUTER.
 if modelIsOpen()
-    set(hObject,'String',get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/xCentroidOverride', 'Value'));
+    set(hObject,'String',get_param('targetModel/yaw_cam/xCentroidOverride', 'Value'));
 else
     set(hObject,'String','')
 end
@@ -926,7 +926,7 @@ function V_Cent_New_Val_y_Callback(hObject, eventdata, handles)
 
 % Hints: get(hObject,'String') returns contents of V_Cent_New_Val_y as text
 %        str2double(get(hObject,'String')) returns contents of V_Cent_New_Val_y as a double
-set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/yCentroidOverride', 'Value',get(hObject,'String'));
+set_param('targetModel/yaw_cam/yCentroidOverride', 'Value',get(hObject,'String'));
 
 
 % --- Executes during object creation, after setting all properties.
@@ -938,7 +938,7 @@ function V_Cent_New_Val_y_CreateFcn(hObject, eventdata, handles)
 % Hint: edit controls usually have a white background on Windows.
 %       See ISPC and COMPUTER.
 if modelIsOpen()
-    set(hObject,'String',get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/yCentroidOverride', 'Value'));
+    set(hObject,'String',get_param('targetModel/yaw_cam/yCentroidOverride', 'Value'));
 else
     set(hObject,'String','')
 end
@@ -954,15 +954,15 @@ function Update_roll_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 if modelIsOpen()
     if strcmp(get(hObject,'String'),'Release')
-        set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/centroidOverrideCommand', 'Value', '0');
+        set_param('targetModel/roll_slant_cam/centroidOverrideCommand', 'Value', '0');
         set(hObject,'String','Hold');
     else
         set(hObject,'String','Release');
         H_Cent_r = get(handles.H_Cent_New_Val_r, 'string');
         V_Cent_r = get(handles.V_Cent_New_Val_r, 'string');
-        set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/xCentroidOverride', 'Value', H_Cent_r);
-        set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/yCentroidOverride', 'Value', V_Cent_r);
-        set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/centroidOverrideCommand', 'Value', '1');
+        set_param('targetModel/roll_slant_cam/xCentroidOverride', 'Value', H_Cent_r);
+        set_param('targetModel/roll_slant_cam/yCentroidOverride', 'Value', V_Cent_r);
+        set_param('targetModel/roll_slant_cam/centroidOverrideCommand', 'Value', '1');
     end
 end
 
@@ -973,16 +973,16 @@ function Update_yaw_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 if modelIsOpen()
     if strcmp(get(hObject,'String'),'Release')
-        set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/centroidOverrideCommand', 'Value', '0');
+        set_param('targetModel/yaw_cam/centroidOverrideCommand', 'Value', '0');
         set(hObject,'String','Hold');
     else
         set(hObject,'String','Release');
         
         H_Cent_y = get(handles.H_Cent_New_Val_y, 'string');
         V_Cent_y = get(handles.V_Cent_New_Val_y, 'string');
-        set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/xCentroidOverride', 'Value', H_Cent_y);
-        set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/yCentroidOverride', 'Value', V_Cent_y);
-        set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/centroidOverrideCommand', 'Value', '1');
+        set_param('targetModel/yaw_cam/xCentroidOverride', 'Value', H_Cent_y);
+        set_param('targetModel/yaw_cam/yCentroidOverride', 'Value', V_Cent_y);
+        set_param('targetModel/yaw_cam/centroidOverrideCommand', 'Value', '1');
     end
 end
 
@@ -997,13 +997,13 @@ function uipanel11_SelectionChangeFcn(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 switch get(eventdata.NewValue,'Tag') % Get Tag of selected object.
     case 'roll_cam'
-        set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/img_con', 'Value', '0');
+        set_param('targetModel/img_con', 'Value', '0');
     case 'yaw_cam'
-        set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/img_con', 'Value', '1');
+        set_param('targetModel/img_con', 'Value', '1');
     case 'pitch_cam'
-        set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/img_con', 'Value', '2');
+        set_param('targetModel/img_con', 'Value', '2');
     case 'pitch_cam_2'
-        set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/img_con', 'Value', '3');
+        set_param('targetModel/img_con', 'Value', '3');
 end
 
 
@@ -1015,7 +1015,7 @@ function H_Cent_newVal_p2_Callback(hObject, eventdata, handles)
 
 % Hints: get(hObject,'String') returns contents of H_Cent_newVal_p2 as text
 %        str2double(get(hObject,'String')) returns contents of H_Cent_newVal_p2 as a double
-set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/xCentroidOverride', 'Value',get(hObject,'String'));
+set_param('targetModel/pitch_cam_vertical_dots/xCentroidOverride', 'Value',get(hObject,'String'));
 
 
 % --- Executes during object creation, after setting all properties.
@@ -1027,7 +1027,7 @@ function H_Cent_newVal_p2_CreateFcn(hObject, eventdata, handles)
 % Hint: edit controls usually have a white background on Windows.
 %       See ISPC and COMPUTER.
 if  modelIsOpen()
-    set(hObject,'String',get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/xCentroidOverride', 'Value'));
+    set(hObject,'String',get_param('targetModel/pitch_cam_vertical_dots/xCentroidOverride', 'Value'));
 else
     set(hObject,'String','')
 end
@@ -1044,7 +1044,7 @@ function V_Cent_newVal_p2_Callback(hObject, eventdata, handles)
 
 % Hints: get(hObject,'String') returns contents of V_Cent_newVal_p2 as text
 %        str2double(get(hObject,'String')) returns contents of V_Cent_newVal_p2 as a double
-set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/yCentroidOverride', 'Value',get(hObject,'String'));
+set_param('targetModel/pitch_cam_vertical_dots/yCentroidOverride', 'Value',get(hObject,'String'));
 
 
 % --- Executes during object creation, after setting all properties.
@@ -1056,7 +1056,7 @@ function V_Cent_newVal_p2_CreateFcn(hObject, eventdata, handles)
 % Hint: edit controls usually have a white background on Windows.
 %       See ISPC and COMPUTER.
 if modelIsOpen()
-    set(hObject,'String',get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/yCentroidOverride', 'Value'));
+    set(hObject,'String',get_param('targetModel/pitch_cam_vertical_dots/yCentroidOverride', 'Value'));
 else
     set(hObject,'String','')
 end
@@ -1072,15 +1072,15 @@ function Update_pitch_v_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 if modelIsOpen()
     if strcmp(get(hObject,'String'),'Release')
-        set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/centroidOverrideCommand', 'Value', '0');
+        set_param('targetModel/pitch_cam_vertical_dots/centroidOverrideCommand', 'Value', '0');
         set(hObject,'String','Hold');
     else
         set(hObject,'String','Release');
         H_Cent_p2 = get(handles.H_Cent_newVal_p2, 'string');
         V_Cent_p2 = get(handles.V_Cent_newVal_p2, 'string');
-        set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/xCentroidOverride', 'Value', H_Cent_p2);
-        set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/yCentroidOverride', 'Value', V_Cent_p2);
-        set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/centroidOverrideCommand', 'Value', '1');
+        set_param('targetModel/pitch_cam_vertical_dots/xCentroidOverride', 'Value', H_Cent_p2);
+        set_param('targetModel/pitch_cam_vertical_dots/yCentroidOverride', 'Value', V_Cent_p2);
+        set_param('targetModel/pitch_cam_vertical_dots/centroidOverrideCommand', 'Value', '1');
     end
 end
 
@@ -1093,7 +1093,7 @@ function sf_da_Callback(hObject, eventdata, handles)
 % Hint: get(hObject,'Value') returns toggle state of sf_da
 
 set(handles.df_sa,'Value',0);
-set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/tether_config', 'Value', '1');
+set_param('targetModel/tether_config', 'Value', '1');
 
 
 % --- Executes on button press in df_sa.
@@ -1105,7 +1105,7 @@ function df_sa_Callback(hObject, eventdata, handles)
 % Hint: get(hObject,'Value') returns toggle state of df_sa
 
 set(handles.sf_da,'Value',0);
-set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/tether_config', 'Value', '-1');
+set_param('targetModel/tether_config', 'Value', '-1');
 
 
 
@@ -1160,8 +1160,8 @@ function glob_coord_Callback(hObject, eventdata, handles)
 x_off = get(handles.x_axis,'string');
 z_off = get(handles.z_axis,'string');
 
-set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/x_offset', 'Value', x_off);
-set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/z_offset', 'Value', z_off);
+set_param('targetModel/x_offset', 'Value', x_off);
+set_param('targetModel/z_offset', 'Value', z_off);
 
 
 % --- Executes during object creation, after setting all properties.
@@ -1182,7 +1182,7 @@ if isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColo
     set(hObject,'BackgroundColor',[.9 .9 .9]);
 end
 if modelIsOpen()
-    PitchProportionalGain = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/kp_theta', 'Gain');
+    PitchProportionalGain = get_param('targetModel/kp_theta', 'Gain');
    set(hObject,'Value', str2num(PitchProportionalGain));
 end
 
@@ -1216,7 +1216,7 @@ function pushbutton13_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 start_time = get(handles.simstart,'string');
-set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/start', 'value', start_time);
+set_param('targetModel/start', 'value', start_time);
 
 
 
@@ -1228,7 +1228,7 @@ function pushbutton19_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton19 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/forward_m_comm', 'Value', '0');
+set_param('targetModel/forward_m_comm', 'Value', '0');
 set(handles.Val13, 'string', '0');
 set(handles.forw_comd, 'Value', 0);
 
@@ -1238,7 +1238,7 @@ function pushbutton20_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton20 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/aft_port_m_comm', 'Value', '0');
+set_param('targetModel/aft_port_m_comm', 'Value', '0');
 set(handles.Val14, 'string', '0');
 set(handles.port_comd, 'Value', 0);
 
@@ -1248,7 +1248,7 @@ function pushbutton21_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton21 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/aft_starboard_m_comm', 'Value', '0');
+set_param('targetModel/aft_starboard_m_comm', 'Value', '0');
 set(handles.Val15, 'string', '0');
 set(handles.starboard_comd, 'Value', 0);
 
@@ -1364,15 +1364,15 @@ function setMotorSpeed(handles,speeds)
         set(handles.port_comd, 'Value', speeds(2));
         set(handles.starboard_comd, 'Value', speeds(3));
         if modelIsOpen
-            set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/centerMotorSpeed', 'Value', num2str(speeds(1)));
-            set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/portMotorSpeed', 'Value', num2str(speeds(2)));
-            set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/starboardMotorSpeed', 'Value', num2str(speeds(3)));
+            set_param('targetModel/centerMotorSpeed', 'Value', num2str(speeds(1)));
+            set_param('targetModel/portMotorSpeed', 'Value', num2str(speeds(2)));
+            set_param('targetModel/starboardMotorSpeed', 'Value', num2str(speeds(3)));
         end
 
 
 
 function result = modelIsOpen()
-if strcmp(find_system('Name','dxpcImMultiTarget_singleimage_CV_euler_finBETA'),'dxpcImMultiTarget_singleimage_CV_euler_finBETA')
+if strcmp(find_system('Name','targetModel'),'targetModel')
     result = 1;
 else
     result = 0;
@@ -1385,7 +1385,7 @@ function Update_pitch_h_CreateFcn(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 if modelIsOpen()
-   x = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_horiz_dots/centroidOverrideCommand', 'Value');
+   x = get_param('targetModel/pitch_cam_horiz_dots/centroidOverrideCommand', 'Value');
    x=str2double(x);
    if x ==0
    set(hObject,'String','Hold' );
@@ -1401,7 +1401,7 @@ function Update_pitch_v_CreateFcn(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 if modelIsOpen()
-   x = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitch_cam_vertical_dots/centroidOverrideCommand', 'Value');
+   x = get_param('targetModel/pitch_cam_vertical_dots/centroidOverrideCommand', 'Value');
    x=str2double(x);
    if x ==0
    set(hObject,'String','Hold' );
@@ -1417,7 +1417,7 @@ function Update_roll_CreateFcn(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 if modelIsOpen()
-   x = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/roll_slant_cam/centroidOverrideCommand', 'Value');
+   x = get_param('targetModel/roll_slant_cam/centroidOverrideCommand', 'Value');
    x=str2double(x);
    if x ==0
    set(hObject,'String','Hold' );
@@ -1433,7 +1433,7 @@ function Update_yaw_CreateFcn(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 if modelIsOpen()
-   x = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/yaw_cam/centroidOverrideCommand', 'Value');
+   x = get_param('targetModel/yaw_cam/centroidOverrideCommand', 'Value');
    x=str2double(x);
    if x ==0
    set(hObject,'String','Hold' );
@@ -1449,9 +1449,9 @@ function OpenLoopButton_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 if modelIsOpen()
-    set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/control_mode', 'Value', '1');
-    set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/OpenLoopOverride', 'Value', '2');
-    set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/phi_control', 'Value', '1');
+    set_param('targetModel/control_mode', 'Value', '1');
+    set_param('targetModel/OpenLoopOverride', 'Value', '2');
+    set_param('targetModel/phi_control', 'Value', '1');
 end
 
 
@@ -1477,7 +1477,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 if modelIsOpen()
-    x = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/phi_amplitude', 'Value');
+    x = get_param('targetModel/phi_amplitude', 'Value');
     set(hObject,'String',x);
     
 end
@@ -1505,7 +1505,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 if modelIsOpen()
-    x = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/phi_frequency', 'Value');
+    x = get_param('targetModel/phi_frequency', 'Value');
     set(hObject,'String',x);
     
 end
@@ -1517,7 +1517,7 @@ function sf_da_CreateFcn(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 if modelIsOpen()
-    x = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/tether_config', 'Value');
+    x = get_param('targetModel/tether_config', 'Value');
     x = str2double(x);
     if x == 1
        set(hObject, 'Value',1);
@@ -1533,7 +1533,7 @@ function df_sa_CreateFcn(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 if modelIsOpen()
-    x = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/tether_config', 'Value');
+    x = get_param('targetModel/tether_config', 'Value');
     x = str2double(x);
     if x == -1
        set(hObject, 'Value',1);
@@ -1555,7 +1555,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 if modelIsOpen()
-    x = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/kp_theta', 'Gain');
+    x = get_param('targetModel/kp_theta', 'Gain');
     set(hObject,'String',x);
     
 end
@@ -1573,7 +1573,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 if modelIsOpen()
-    x = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/kd_theta', 'Gain');
+    x = get_param('targetModel/kd_theta', 'Gain');
     set(hObject,'String',x);
     
 end
@@ -1591,7 +1591,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 if modelIsOpen()
-    x = get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/tau_theta', 'Gain');
+    x = get_param('targetModel/tau_theta', 'Gain');
     set(hObject,'String',x);
     
 end
@@ -1603,8 +1603,8 @@ function pushbutton24_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 if modelIsOpen()
-    set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/control_mode', 'Value', '1');
-    set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/phi_control', 'Value', '1');
+    set_param('targetModel/control_mode', 'Value', '1');
+    set_param('targetModel/phi_control', 'Value', '1');
 end
 
 
@@ -1653,7 +1653,7 @@ function pitchDeadbandUpperLimit_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 if modelIsOpen()
-    set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitchDBUpperLimit', 'Value',get(hObject,'String'));
+    set_param('targetModel/pitchDBUpperLimit', 'Value',get(hObject,'String'));
 end
 
 % Hints: get(hObject,'String') returns contents of pitchDeadbandUpperLimit as text
@@ -1672,7 +1672,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 if modelIsOpen()
-    set(hObject,'String',get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitchDBUpperLimit', 'Value'))
+    set(hObject,'String',get_param('targetModel/pitchDBUpperLimit', 'Value'))
 end
 
 
@@ -1682,7 +1682,7 @@ function pitchDeadbandLowerLimit_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 if modelIsOpen()
-    set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitchDBLowerLimit', 'Value',get(hObject,'String'));
+    set_param('targetModel/pitchDBLowerLimit', 'Value',get(hObject,'String'));
 end
 % Hints: get(hObject,'String') returns contents of pitchDeadbandLowerLimit as text
 %        str2double(get(hObject,'String')) returns contents of pitchDeadbandLowerLimit as a double
@@ -1700,7 +1700,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 if modelIsOpen()
-    set(hObject,'String',get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/pitchDBLowerLimit', 'Value'))
+    set(hObject,'String',get_param('targetModel/pitchDBLowerLimit', 'Value'))
 end
 
 
@@ -1710,7 +1710,7 @@ function altitudeDeadbandUpperLimit_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 if modelIsOpen()
-    set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/zDBUpperLimit', 'Value',get(hObject,'String'));
+    set_param('targetModel/zDBUpperLimit', 'Value',get(hObject,'String'));
 end
 % Hints: get(hObject,'String') returns contents of altitudeDeadbandUpperLimit as text
 %        str2double(get(hObject,'String')) returns contents of altitudeDeadbandUpperLimit as a double
@@ -1728,7 +1728,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 if modelIsOpen()
-    set(hObject,'String',get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/zDBUpperLimit', 'Value'))
+    set(hObject,'String',get_param('targetModel/zDBUpperLimit', 'Value'))
 end
 
 
@@ -1738,7 +1738,7 @@ function altitudeDeadbandLowerLimit_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 if modelIsOpen()
-    set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/zDBLowerLimit', 'Value',get(hObject,'String'));
+    set_param('targetModel/zDBLowerLimit', 'Value',get(hObject,'String'));
 end
 % Hints: get(hObject,'String') returns contents of altitudeDeadbandLowerLimit as text
 %        str2double(get(hObject,'String')) returns contents of altitudeDeadbandLowerLimit as a double
@@ -1756,7 +1756,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 if modelIsOpen()
-    set(hObject,'String',get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/zDBLowerLimit', 'Value'))
+    set(hObject,'String',get_param('targetModel/zDBLowerLimit', 'Value'))
 end
 
 
@@ -1766,7 +1766,7 @@ function pitchDeadbandOnOff_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 if modelIsOpen()
-    set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/thetaDeadbandOnOff', 'Value',num2str(get(hObject,'Value')));
+    set_param('targetModel/thetaDeadbandOnOff', 'Value',num2str(get(hObject,'Value')));
 end
 % Hint: get(hObject,'Value') returns toggle state of pitchDeadbandOnOff
 
@@ -1777,7 +1777,7 @@ function altitudeDeadbandOnOff_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 if modelIsOpen()
-    set_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/zDeadbandOnOff', 'Value',num2str(get(hObject,'Value')));
+    set_param('targetModel/zDeadbandOnOff', 'Value',num2str(get(hObject,'Value')));
 end
 % Hint: get(hObject,'Value') returns toggle state of altitudeDeadbandOnOff
 
@@ -1795,7 +1795,7 @@ function pitchDeadbandOnOff_CreateFcn(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 if modelIsOpen()
-    set(hObject,'Value',str2double(get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/thetaDeadbandOnOff', 'Value'))==1)
+    set(hObject,'Value',str2double(get_param('targetModel/thetaDeadbandOnOff', 'Value'))==1)
 end
 
 
@@ -1805,5 +1805,5 @@ function altitudeDeadbandOnOff_CreateFcn(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 if modelIsOpen()
-    set(hObject,'Value',str2double(get_param('dxpcImMultiTarget_singleimage_CV_euler_finBETA/zDeadbandOnOff', 'Value'))==1)
+    set(hObject,'Value',str2double(get_param('targetModel/zDeadbandOnOff', 'Value'))==1)
 end
