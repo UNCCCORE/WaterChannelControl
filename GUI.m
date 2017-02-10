@@ -22,7 +22,7 @@ function varargout = GUI(varargin)
 
 % Edit the above text to modify the response to help GUI
 
-% Last Modified by GUIDE v2.5 10-Feb-2017 14:34:51
+% Last Modified by GUIDE v2.5 10-Feb-2017 18:00:45
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -744,11 +744,19 @@ if modelIsOpen()
         case 'numpad7'
             setMotorSpeed('Port',num2str(-speed),handles);
             setMotorSpeed('Starboard',num2str(speed),handles);
-        case 'numpad8'
+        case 'divide' % Pitch up
+            setMotorSpeed('Port',num2str(-speed),handles);
+            setMotorSpeed('Center',num2str(speed),handles);
+            setMotorSpeed('Starboard',num2str(-speed),handles);
+        case 'numpad8' % pitch down
+            setMotorSpeed('Port',num2str(speed),handles);
+            setMotorSpeed('Center',num2str(-speed),handles);
+            setMotorSpeed('Starboard',num2str(speed),handles);
+        case 'subtract' % All tethers retract
             setMotorSpeed('Port',num2str(-speed),handles);
             setMotorSpeed('Center',num2str(-speed),handles);
             setMotorSpeed('Starboard',num2str(-speed),handles);
-        case 'divide'
+        case 'add' % all tethers 
             setMotorSpeed('Port',num2str(speed),handles);
             setMotorSpeed('Center',num2str(speed),handles);
             setMotorSpeed('Starboard',num2str(speed),handles);
@@ -814,3 +822,538 @@ end
 set(hObject,'Value',0.5);
 
 function figure1_KeyReleaseFcn(hObject,eventData,handles)
+
+
+
+function editKPRoll_Callback(hObject, eventdata, handles)
+% hObject    handle to editKPRoll (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of editKPRoll as text
+%        str2double(get(hObject,'String')) returns contents of editKPRoll as a double
+if modelIsOpen()
+   set_param('targetModel/kpRoll','Gain',num2str(hObject.String))
+end
+
+% --- Executes during object creation, after setting all properties.
+function editKPRoll_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editKPRoll (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+if modelIsOpen()
+    set(hObject,'String',get_param('targetModel/kpRoll','Gain'))
+end
+
+
+function editKDRoll_Callback(hObject, eventdata, handles)
+% hObject    handle to editKDRoll (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of editKDRoll as text
+%        str2double(get(hObject,'String')) returns contents of editKDRoll as a double
+if modelIsOpen()
+   set_param('targetModel/kdRoll','Gain',num2str(hObject.String))
+end
+
+% --- Executes during object creation, after setting all properties.
+function editKDRoll_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editKDRoll (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+if modelIsOpen()
+    set(hObject,'String',get_param('targetModel/kdRoll','Gain'))
+end
+
+
+function editTauRoll_Callback(hObject, eventdata, handles)
+% hObject    handle to editTauRoll (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of editTauRoll as text
+%        str2double(get(hObject,'String')) returns contents of editTauRoll as a double
+if modelIsOpen()
+   set_param('targetModel/tauRoll','Value',num2str(hObject.String))
+end
+
+% --- Executes during object creation, after setting all properties.
+function editTauRoll_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editTauRoll (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+if modelIsOpen()
+    set(hObject,'String',get_param('targetModel/tauRoll','Value'))
+end
+
+
+function editKPPitch_Callback(hObject, eventdata, handles)
+% hObject    handle to editKPPitch (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of editKPPitch as text
+%        str2double(get(hObject,'String')) returns contents of editKPPitch as a double
+if modelIsOpen()
+   set_param('targetModel/kpPitch','Gain',num2str(hObject.String))
+end
+
+% --- Executes during object creation, after setting all properties.
+function editKPPitch_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editKPPitch (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+if modelIsOpen()
+    set(hObject,'String',get_param('targetModel/kpPitch','Gain'))
+end
+
+
+function editKDPitch_Callback(hObject, eventdata, handles)
+% hObject    handle to editKDPitch (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of editKDPitch as text
+%        str2double(get(hObject,'String')) returns contents of editKDPitch as a double
+if modelIsOpen()
+   set_param('targetModel/kdPitch','Gain',num2str(hObject.String))
+end
+
+% --- Executes during object creation, after setting all properties.
+function editKDPitch_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editKDPitch (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+if modelIsOpen()
+    set(hObject,'String',get_param('targetModel/kdPitch','Gain'))
+end
+
+
+function editTauPitch_Callback(hObject, eventdata, handles)
+% hObject    handle to editTauPitch (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of editTauPitch as text
+%        str2double(get(hObject,'String')) returns contents of editTauPitch as a double
+if modelIsOpen()
+   set_param('targetModel/tauPitch','Value',num2str(hObject.String))
+end
+
+% --- Executes during object creation, after setting all properties.
+function editTauPitch_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editTauPitch (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+if modelIsOpen()
+    set(hObject,'String',get_param('targetModel/tauPitch','Value'))
+end
+
+
+function editKPAltitude_Callback(hObject, eventdata, handles)
+% hObject    handle to editKPAltitude (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of editKPAltitude as text
+%        str2double(get(hObject,'String')) returns contents of editKPAltitude as a double
+if modelIsOpen()
+   set_param('targetModel/kpAltitude','Gain',num2str(hObject.String))
+end
+
+% --- Executes during object creation, after setting all properties.
+function editKPAltitude_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editKPAltitude (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+if modelIsOpen()
+    set(hObject,'String',get_param('targetModel/kpAltitude','Gain'))
+end
+
+
+function editKDAltitude_Callback(hObject, eventdata, handles)
+% hObject    handle to editKDAltitude (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of editKDAltitude as text
+%        str2double(get(hObject,'String')) returns contents of editKDAltitude as a double
+if modelIsOpen()
+   set_param('targetModel/kdAltitude','Gain',num2str(hObject.String))
+end
+
+% --- Executes during object creation, after setting all properties.
+function editKDAltitude_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editKDAltitude (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+if modelIsOpen()
+    set(hObject,'String',get_param('targetModel/kdAltitude','Gain'))
+end
+
+
+
+function editTauAltitude_Callback(hObject, eventdata, handles)
+% hObject    handle to editTauAltitude (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of editTauAltitude as text
+%        str2double(get(hObject,'String')) returns contents of editTauAltitude as a double
+if modelIsOpen()
+   set_param('targetModel/tauAltitude','Value',num2str(hObject.String))
+end
+
+% --- Executes during object creation, after setting all properties.
+function editTauAltitude_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editTauAltitude (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+if modelIsOpen()
+    set(hObject,'String',get_param('targetModel/tauAltitude','Value'))
+end
+
+
+
+function editRollSetpoint_Callback(hObject, eventdata, handles)
+% hObject    handle to editRollSetpoint (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of editRollSetpoint as text
+%        str2double(get(hObject,'String')) returns contents of editRollSetpoint as a double
+if modelIsOpen()
+     set_param('targetModel/phiDes','Value',hObject.String)
+end
+
+% --- Executes during object creation, after setting all properties.
+function editRollSetpoint_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editRollSetpoint (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+if modelIsOpen()
+    set(hObject,'String',get_param('targetModel/phiDes','Value'))
+end
+
+
+function editPitchSetpoint_Callback(hObject, eventdata, handles)
+% hObject    handle to editPitchSetpoint (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of editPitchSetpoint as text
+%        str2double(get(hObject,'String')) returns contents of editPitchSetpoint as a double
+if modelIsOpen()
+    set_param('targetModel/thetaDes','Value',num2str(hObject.String))
+end
+
+% --- Executes during object creation, after setting all properties.
+function editPitchSetpoint_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editPitchSetpoint (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+if modelIsOpen()
+    set(hObject,'String',get_param('targetModel/thetaDes','Value'))
+end
+
+
+
+function editAltitudeSetpoint_Callback(hObject, eventdata, handles)
+% hObject    handle to editAltitudeSetpoint (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of editAltitudeSetpoint as text
+%        str2double(get(hObject,'String')) returns contents of editAltitudeSetpoint as a double
+if modelIsOpen()
+    set_param('targetModel/zDes','Value',num2str(hObject.String))
+end
+
+% --- Executes during object creation, after setting all properties.
+function editAltitudeSetpoint_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editAltitudeSetpoint (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+if modelIsOpen()
+    set(hObject,'String',get_param('targetModel/zDes','Value'))
+end
+
+
+
+function editCrosswindPeriod_Callback(hObject, eventdata, handles)
+% hObject    handle to editCrosswindPeriod (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of editCrosswindPeriod as text
+%        str2double(get(hObject,'String')) returns contents of editCrosswindPeriod as a double
+if modelIsOpen()
+    set_param('targetModel/phiFrequency','Value',num2str(eval(hObject.String)))
+end
+
+% --- Executes during object creation, after setting all properties.
+function editCrosswindPeriod_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editCrosswindPeriod (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+if modelIsOpen()
+    set(hObject,'String',get_param('targetModel/phiFrequency','Value'))
+end
+
+
+function editCrosswindAmplitude_Callback(hObject, eventdata, handles)
+% hObject    handle to editCrosswindAmplitude (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of editCrosswindAmplitude as text
+%        str2double(get(hObject,'String')) returns contents of editCrosswindAmplitude as a double
+if modelIsOpen()
+    set_param('targetModel/phiAmplitude','Value',num2str(eval(hObject.String)))
+end
+
+% --- Executes during object creation, after setting all properties.
+function editCrosswindAmplitude_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editCrosswindAmplitude (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+if modelIsOpen()
+    set(hObject,'String',get_param('targetModel/phiAmplitude','Value'))
+end
+
+
+
+function editPitchDeadbandUpperLimit_Callback(hObject, eventdata, handles)
+% hObject    handle to editPitchDeadbandUpperLimit (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of editPitchDeadbandUpperLimit as text
+%        str2double(get(hObject,'String')) returns contents of editPitchDeadbandUpperLimit as a double
+if modelIsOpen()
+   set_param('targetModel/pitchDBUpperLimit','Value',num2str(hObject.String))
+end
+
+% --- Executes during object creation, after setting all properties.
+function editPitchDeadbandUpperLimit_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editPitchDeadbandUpperLimit (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+if modelIsOpen()
+    set(hObject,'String',get_param('targetModel/pitchDBUpperLimit','Value'))
+end
+
+
+function editPitchDeadbandLowerLimit_Callback(hObject, eventdata, handles)
+% hObject    handle to editPitchDeadbandLowerLimit (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of editPitchDeadbandLowerLimit as text
+%        str2double(get(hObject,'String')) returns contents of editPitchDeadbandLowerLimit as a double
+if modelIsOpen()
+   set_param('targetModel/pitchDBLowerLimit','Value',num2str(hObject.String))
+end
+
+% --- Executes during object creation, after setting all properties.
+function editPitchDeadbandLowerLimit_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editPitchDeadbandLowerLimit (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+if modelIsOpen()
+    set(hObject,'String',get_param('targetModel/pitchDBLowerLimit','Value'))
+end
+
+% --- Executes on button press in checkboxPitchDeadbandOnOff.
+function checkboxPitchDeadbandOnOff_Callback(hObject, eventdata, handles)
+% hObject    handle to checkboxPitchDeadbandOnOff (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of checkboxPitchDeadbandOnOff
+if modelIsOpen()
+    set_param('targetModel/thetaDeadbandOnOff','Value',num2str(hObject.Value))
+end
+
+
+% --- Executes during object creation, after setting all properties.
+function checkboxPitchDeadbandOnOff_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to checkboxPitchDeadbandOnOff (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+if modelIsOpen()
+    set(hObject,'Value',str2double(get_param('targetModel/thetaDeadbandOnOff','Value')));
+end
+
+
+
+function editAltitudeDeadbandUpperLimit_Callback(hObject, eventdata, handles)
+% hObject    handle to editAltitudeDeadbandUpperLimit (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of editAltitudeDeadbandUpperLimit as text
+%        str2double(get(hObject,'String')) returns contents of editAltitudeDeadbandUpperLimit as a double
+if modelIsOpen()
+   set_param('targetModel/zDBUpperLimit','Value',num2str(hObject.String))
+end
+
+% --- Executes during object creation, after setting all properties.
+function editAltitudeDeadbandUpperLimit_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editAltitudeDeadbandUpperLimit (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+if modelIsOpen()
+    set(hObject,'String',str2double(get_param('targetModel/zDBUpperLimit','Value')));
+end
+
+% --- Executes on button press in checkboxAltitudeDeadband.
+function checkboxAltitudeDeadband_Callback(hObject, eventdata, handles)
+% hObject    handle to checkboxAltitudeDeadband (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of checkboxAltitudeDeadband
+if modelIsOpen()
+    set_param('targetModel/zDeadbandOnOff','Value',num2str(hObject.Value))
+end
+
+
+% --- Executes during object creation, after setting all properties.
+function checkboxAltitudeDeadband_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to checkboxAltitudeDeadband (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+if modelIsOpen()
+    set(hObject,'Value',str2double(get_param('targetModel/zDeadbandOnOff','Value')));
+end
+
+
+function editAltitudeDeadbandLowerLimit_Callback(hObject, eventdata, handles)
+% hObject    handle to editAltitudeDeadbandLowerLimit (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of editAltitudeDeadbandLowerLimit as text
+%        str2double(get(hObject,'String')) returns contents of editAltitudeDeadbandLowerLimit as a double
+if modelIsOpen()
+   set_param('targetModel/zDBLowerLimit','Value',num2str(hObject.String))
+end
+
+% --- Executes during object creation, after setting all properties.
+function editAltitudeDeadbandLowerLimit_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editAltitudeDeadbandLowerLimit (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+if modelIsOpen()
+    set(hObject,'String',str2double(get_param('targetModel/zDBLowerLimit','Value')));
+end
