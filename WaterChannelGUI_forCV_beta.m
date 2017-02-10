@@ -81,7 +81,7 @@ function H_Cent_New_Val_p_Callback(hObject, eventdata, handles)
 
 % Hints: get(hObject,'String') returns contents of H_Cent_New_Val_p as text
 %        str2double(get(hObject,'String')) returns contents of H_Cent_New_Val_p as a double
-set_param('targetModel/pitch_cam_horiz_dots/xCentroidOverride', 'Value',get(hObject,'String'));
+set_param('targetModelcam1xCentroidOverride', 'Value',get(hObject,'String'));
 
 % --- Executes during object creation, after setting all properties.
 function H_Cent_New_Val_p_CreateFcn(hObject, eventdata, handles)
@@ -94,7 +94,7 @@ function H_Cent_New_Val_p_CreateFcn(hObject, eventdata, handles)
 
 
 if modelIsOpen()
-    set(hObject,'String',get_param('targetModel/pitch_cam_horiz_dots/xCentroidOverride', 'Value'));
+    set(hObject,'String',get_param('targetModelcam1xCentroidOverride', 'Value'));
 else
     set(hObject,'String','')
 end
@@ -111,7 +111,7 @@ function V_Cent_New_Val_p_Callback(hObject, eventdata, handles)
 
 % Hints: get(hObject,'String') returns contents of V_Cent_New_Val_p as text
 %        str2double(get(hObject,'String')) returns contents of V_Cent_New_Val_p as a double
-set_param('targetModel/pitch_cam_horiz_dots/yCentroidOverride', 'Value',get(hObject,'String'));
+set_param('targetModelcam1yCentroidOverride', 'Value',get(hObject,'String'));
 
 
 % --- Executes during object creation, after setting all properties.
@@ -123,7 +123,7 @@ function V_Cent_New_Val_p_CreateFcn(hObject, eventdata, handles)
 % Hint: edit controls usually have a white background on Windows.
 %       See ISPC and COMPUTER.
 if modelIsOpen()
-    set(hObject,'String',get_param('targetModel/pitch_cam_horiz_dots/yCentroidOverride', 'Value'));
+    set(hObject,'String',get_param('targetModelcam1yCentroidOverride', 'Value'));
 else
     set(hObject,'String','')
 end
@@ -139,15 +139,15 @@ function Update_pitch_h_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 if modelIsOpen()
     if strcmp(get(hObject,'String'),'Release')
-        set_param('targetModel/pitch_cam_horiz_dots/centroidOverrideCommand', 'Value', '0');
+        set_param('targetModelcam1centroidOverrideCommand', 'Value', '0');
         set(hObject,'String','Hold');
     else
         set(hObject,'String','Release');
         H_Cent_p = get(handles.H_Cent_New_Val_p, 'string');
         V_Cent_p = get(handles.V_Cent_New_Val_p, 'string');
-        set_param('targetModel/pitch_cam_horiz_dots/xCentroidOverride', 'Value', H_Cent_p);
-        set_param('targetModel/pitch_cam_horiz_dots/yCentroidOverride', 'Value', V_Cent_p);
-        set_param('targetModel/pitch_cam_horiz_dots/centroidOverrideCommand', 'Value', '1');
+        set_param('targetModelcam1xCentroidOverride', 'Value', H_Cent_p);
+        set_param('targetModelcam1yCentroidOverride', 'Value', V_Cent_p);
+        set_param('targetModelcam1centroidOverrideCommand', 'Value', '1');
     end
 end
 
@@ -1015,7 +1015,7 @@ function H_Cent_newVal_p2_Callback(hObject, eventdata, handles)
 
 % Hints: get(hObject,'String') returns contents of H_Cent_newVal_p2 as text
 %        str2double(get(hObject,'String')) returns contents of H_Cent_newVal_p2 as a double
-set_param('targetModel/pitch_cam_vertical_dots/xCentroidOverride', 'Value',get(hObject,'String'));
+set_param('targetModelcam2xCentroidOverride', 'Value',get(hObject,'String'));
 
 
 % --- Executes during object creation, after setting all properties.
@@ -1027,7 +1027,7 @@ function H_Cent_newVal_p2_CreateFcn(hObject, eventdata, handles)
 % Hint: edit controls usually have a white background on Windows.
 %       See ISPC and COMPUTER.
 if  modelIsOpen()
-    set(hObject,'String',get_param('targetModel/pitch_cam_vertical_dots/xCentroidOverride', 'Value'));
+    set(hObject,'String',get_param('targetModelcam2xCentroidOverride', 'Value'));
 else
     set(hObject,'String','')
 end
@@ -1044,7 +1044,7 @@ function V_Cent_newVal_p2_Callback(hObject, eventdata, handles)
 
 % Hints: get(hObject,'String') returns contents of V_Cent_newVal_p2 as text
 %        str2double(get(hObject,'String')) returns contents of V_Cent_newVal_p2 as a double
-set_param('targetModel/pitch_cam_vertical_dots/yCentroidOverride', 'Value',get(hObject,'String'));
+set_param('targetModelcam2yCentroidOverride', 'Value',get(hObject,'String'));
 
 
 % --- Executes during object creation, after setting all properties.
@@ -1056,7 +1056,7 @@ function V_Cent_newVal_p2_CreateFcn(hObject, eventdata, handles)
 % Hint: edit controls usually have a white background on Windows.
 %       See ISPC and COMPUTER.
 if modelIsOpen()
-    set(hObject,'String',get_param('targetModel/pitch_cam_vertical_dots/yCentroidOverride', 'Value'));
+    set(hObject,'String',get_param('targetModelcam2yCentroidOverride', 'Value'));
 else
     set(hObject,'String','')
 end
@@ -1072,15 +1072,15 @@ function Update_pitch_v_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 if modelIsOpen()
     if strcmp(get(hObject,'String'),'Release')
-        set_param('targetModel/pitch_cam_vertical_dots/centroidOverrideCommand', 'Value', '0');
+        set_param('targetModelcam2centroidOverrideCommand', 'Value', '0');
         set(hObject,'String','Hold');
     else
         set(hObject,'String','Release');
         H_Cent_p2 = get(handles.H_Cent_newVal_p2, 'string');
         V_Cent_p2 = get(handles.V_Cent_newVal_p2, 'string');
-        set_param('targetModel/pitch_cam_vertical_dots/xCentroidOverride', 'Value', H_Cent_p2);
-        set_param('targetModel/pitch_cam_vertical_dots/yCentroidOverride', 'Value', V_Cent_p2);
-        set_param('targetModel/pitch_cam_vertical_dots/centroidOverrideCommand', 'Value', '1');
+        set_param('targetModelcam2xCentroidOverride', 'Value', H_Cent_p2);
+        set_param('targetModelcam2yCentroidOverride', 'Value', V_Cent_p2);
+        set_param('targetModelcam2centroidOverrideCommand', 'Value', '1');
     end
 end
 
@@ -1385,7 +1385,7 @@ function Update_pitch_h_CreateFcn(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 if modelIsOpen()
-   x = get_param('targetModel/pitch_cam_horiz_dots/centroidOverrideCommand', 'Value');
+   x = get_param('targetModelcam1centroidOverrideCommand', 'Value');
    x=str2double(x);
    if x ==0
    set(hObject,'String','Hold' );
@@ -1401,7 +1401,7 @@ function Update_pitch_v_CreateFcn(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 if modelIsOpen()
-   x = get_param('targetModel/pitch_cam_vertical_dots/centroidOverrideCommand', 'Value');
+   x = get_param('targetModelcam2centroidOverrideCommand', 'Value');
    x=str2double(x);
    if x ==0
    set(hObject,'String','Hold' );
