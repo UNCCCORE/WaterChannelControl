@@ -22,16 +22,16 @@ function varargout = GUI(varargin)
 
 % Edit the above text to modify the response to help GUI
 
-% Last Modified by GUIDE v2.5 10-Feb-2017 11:58:52
+% Last Modified by GUIDE v2.5 10-Feb-2017 14:34:51
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
-                   'gui_Singleton',  gui_Singleton, ...
-                   'gui_OpeningFcn', @GUI_OpeningFcn, ...
-                   'gui_OutputFcn',  @GUI_OutputFcn, ...
-                   'gui_LayoutFcn',  [] , ...
-                   'gui_Callback',   []);
+    'gui_Singleton',  gui_Singleton, ...
+    'gui_OpeningFcn', @GUI_OpeningFcn, ...
+    'gui_OutputFcn',  @GUI_OutputFcn, ...
+    'gui_LayoutFcn',  [] , ...
+    'gui_Callback',   []);
 if nargin && ischar(varargin{1})
     gui_State.gui_Callback = str2func(varargin{1});
 end
@@ -63,7 +63,7 @@ guidata(hObject, handles);
 
 
 % --- Outputs from this function are returned to the command line.
-function varargout = GUI_OutputFcn(hObject, eventdata, handles) 
+function varargout = GUI_OutputFcn(hObject, eventdata, handles)
 % varargout  cell array for returning output args (see VARARGOUT);
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
@@ -75,20 +75,20 @@ varargout{1} = handles.output;
 
 % --- Executes when selected object is changed in uibuttongroup1.
 function uibuttongroup1_SelectionChangedFcn(hObject, eventdata, handles)
-% hObject    handle to the selected object in uibuttongroup1 
+% hObject    handle to the selected object in uibuttongroup1
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 if modelIsOpen()
-   switch eventdata.NewValue.String;
-       case 'Cam 1'
-           set_param('targetModel/imageSource', 'Value', '1');
-       case 'Cam 2'
-           set_param('targetModel/imageSource', 'Value', '2');
-       case 'Cam 3A'
-           set_param('targetModel/imageSource', 'Value', '3');
-       case 'Cam 3B'
-           set_param('targetModel/imageSource', 'Value', '4');
-   end
+    switch eventdata.NewValue.String;
+        case 'Cam 1'
+            set_param('targetModel/imageSource', 'Value', '1');
+        case 'Cam 2'
+            set_param('targetModel/imageSource', 'Value', '2');
+        case 'Cam 3A'
+            set_param('targetModel/imageSource', 'Value', '3');
+        case 'Cam 3B'
+            set_param('targetModel/imageSource', 'Value', '4');
+    end
 end
 
 % --- Executes during object creation, after setting all properties.
@@ -109,47 +109,22 @@ eventdata.NewValue.String=hObject.SelectedObject.String;
 uibuttongroup1_SelectionChangedFcn(hObject, eventdata, handles)
 
 
-% --- Executes on button press in pushbutton1.
-function pushbutton1_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton1 (see GCBO)
+
+function editROI1H_Callback(hObject, eventdata, handles)
+% hObject    handle to editROI1H (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-
-% --- Executes on button press in pushbutton2.
-function pushbutton2_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton2 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-
-% --- Executes on button press in pushbutton3.
-function pushbutton3_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton3 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-
-% --- Executes on button press in pushbutton4.
-function pushbutton4_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton4 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-
-
-function edit1_Callback(hObject, eventdata, handles)
-% hObject    handle to edit1 (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-% Hints: get(hObject,'String') returns contents of edit1 as text
-%        str2double(get(hObject,'String')) returns contents of edit1 as a double
-
+% Hints: get(hObject,'String') returns contents of editROI1H as text
+%        str2double(get(hObject,'String')) returns contents of editROI1H as a double
+num = str2num(hObject.String{:});
+if ~isempty(num) && modelIsOpen()
+    set_param('targetModel/cam1/xCentroidOverride','Value',num2str(num));
+end
 
 % --- Executes during object creation, after setting all properties.
-function edit1_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit1 (see GCBO)
+function editROI1H_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editROI1H (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -158,21 +133,27 @@ function edit1_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
+if modelIsOpen()
+    set(hObject,'String',get_param('targetModel/cam1/xCentroidOverride','Value'))
+end
 
 
 
-function edit2_Callback(hObject, eventdata, handles)
-% hObject    handle to edit2 (see GCBO)
+function editROI2H_Callback(hObject, eventdata, handles)
+% hObject    handle to editROI2H (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of edit2 as text
-%        str2double(get(hObject,'String')) returns contents of edit2 as a double
+% Hints: get(hObject,'String') returns contents of editROI2H as text
+%        str2double(get(hObject,'String')) returns contents of editROI2H as a double
 
-
+num = str2num(hObject.String{:});
+if ~isempty(num) && modelIsOpen()
+    set_param('targetModel/cam2/xCentroidOverride','Value',num2str(num));
+end
 % --- Executes during object creation, after setting all properties.
-function edit2_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to edit2 (see GCBO)
+function editROI2H_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editROI2H (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -181,3 +162,655 @@ function edit2_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
+if modelIsOpen()
+    set(hObject,'String',get_param('targetModel/cam2/xCentroidOverride','Value'))
+end
+
+
+
+function editROI3AH_Callback(hObject, eventdata, handles)
+% hObject    handle to editROI3AH (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of editROI3AH as text
+%        str2double(get(hObject,'String')) returns contents of editROI3AH as a double
+
+num = str2num(hObject.String{:});
+if ~isempty(num) && modelIsOpen()
+    set_param('targetModel/cam3A/xCentroidOverride','Value',num2str(num));
+end
+% --- Executes during object creation, after setting all properties.
+function editROI3AH_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editROI3AH (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+if modelIsOpen()
+    set(hObject,'String',get_param('targetModel/cam3A/xCentroidOverride','Value'))
+end
+
+
+function editROI3BH_Callback(hObject, eventdata, handles)
+% hObject    handle to editROI3BH (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of editROI3BH as text
+%        str2double(get(hObject,'String')) returns contents of editROI3BH as a double
+num = str2num(hObject.String{:});
+if ~isempty(num) && modelIsOpen()
+    set_param('targetModel/cam3B/xCentroidOverride','Value',num2str(num));
+end
+
+% --- Executes during object creation, after setting all properties.
+function editROI3BH_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editROI3BH (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+if modelIsOpen()
+    set(hObject,'String',get_param('targetModel/cam3B/xCentroidOverride','Value'))
+end
+
+
+function editROI1V_Callback(hObject, eventdata, handles)
+% hObject    handle to editROI1V (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of editROI1V as text
+%        str2double(get(hObject,'String')) returns contents of editROI1V as a double
+num = str2num(hObject.String{:});
+if ~isempty(num) && modelIsOpen()
+    set_param('targetModel/cam1/yCentroidOverride','Value',num2str(num));
+end
+
+% --- Executes during object creation, after setting all properties.
+function editROI1V_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editROI1V (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+if modelIsOpen()
+    set(hObject,'String',get_param('targetModel/cam1/yCentroidOverride','Value'))
+end
+
+
+function editROI2V_Callback(hObject, eventdata, handles)
+% hObject    handle to editROI2V (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of editROI2V as text
+%        str2double(get(hObject,'String')) returns contents of editROI2V as a double
+num = str2num(hObject.String{:});
+if ~isempty(num) && modelIsOpen()
+    set_param('targetModel/cam2/yCentroidOverride','Value',num2str(num));
+end
+
+% --- Executes during object creation, after setting all properties.
+function editROI2V_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editROI2V (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+if modelIsOpen()
+    set(hObject,'String',get_param('targetModel/cam2/yCentroidOverride','Value'))
+end
+
+
+function editROI3AV_Callback(hObject, eventdata, handles)
+% hObject    handle to editROI3AV (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of editROI3AV as text
+%        str2double(get(hObject,'String')) returns contents of editROI3AV as a double
+num = str2num(hObject.String{:});
+if ~isempty(num) && modelIsOpen()
+    set_param('targetModel/cam3A/yCentroidOverride','Value',num2str(num));
+end
+
+% --- Executes during object creation, after setting all properties.
+function editROI3AV_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editROI3AV (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+if modelIsOpen()
+    set(hObject,'String',get_param('targetModel/cam3A/yCentroidOverride','Value'))
+end
+
+
+function edit3BV_Callback(hObject, eventdata, handles)
+% hObject    handle to edit3BV (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of edit3BV as text
+%        str2double(get(hObject,'String')) returns contents of edit3BV as a double
+num = str2num(hObject.String{:});
+if ~isempty(num) && modelIsOpen()
+    set_param('targetModel/cam3B/yCentroidOverride','Value',num2str(num));
+end
+
+% --- Executes during object creation, after setting all properties.
+function edit3BV_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to edit3BV (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+if modelIsOpen()
+    set(hObject,'String',get_param('targetModel/cam3B/yCentroidOverride','Value'))
+end
+
+
+% --- Executes on button press in togglebuttonROI1.
+function togglebuttonROI1_Callback(hObject, eventdata, handles)
+% hObject    handle to togglebuttonROI1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of togglebuttonROI1
+if modelIsOpen()
+    if strcmpi(hObject.String,'hold')
+        set_param('targetModel/cam1/centroidOverrideCommand','Value','1')
+        set(hObject,'String','Release');
+        set(hObject,'Value',0);
+    else
+        set_param('targetModel/cam1/centroidOverrideCommand','Value','0')
+        set(hObject,'String','Hold');
+        set(hObject,'Value',1);
+    end
+end
+% --- Executes on button press in togglebuttonROI3A.
+function togglebuttonROI3A_Callback(hObject, eventdata, handles)
+% hObject    handle to togglebuttonROI3A (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of togglebuttonROI3A
+if modelIsOpen()
+    if strcmpi(hObject.String,'hold')
+        set_param('targetModel/cam3A/centroidOverrideCommand','Value','1')
+        set(hObject,'String','Release');
+        set(hObject,'Value',0);
+    else
+        set_param('targetModel/cam3A/centroidOverrideCommand','Value','0')
+        set(hObject,'String','Hold');
+        set(hObject,'Value',1);
+    end
+end
+% --- Executes on button press in togglebuttonROI3B.
+function togglebuttonROI3B_Callback(hObject, eventdata, handles)
+% hObject    handle to togglebuttonROI3B (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of togglebuttonROI3B
+if modelIsOpen()
+    if strcmpi(hObject.String,'hold')
+        set_param('targetModel/cam3B/centroidOverrideCommand','Value','1')
+        set(hObject,'String','Release');
+        set(hObject,'Value',0);
+    else
+        set_param('targetModel/cam3B/centroidOverrideCommand','Value','0')
+        set(hObject,'String','Hold');
+        set(hObject,'Value',1);
+    end
+end
+
+% --- Executes on button press in togglebuttonROI2.
+function togglebuttonROI2_Callback(hObject, eventdata, handles)
+% hObject    handle to togglebuttonROI2 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of togglebuttonROI2
+if modelIsOpen()
+    if strcmpi(hObject.String,'hold')
+        set_param('targetModel/cam2/centroidOverrideCommand','Value','1')
+        set(hObject,'String','Release');
+        set(hObject,'Value',0);
+    else
+        set_param('targetModel/cam2/centroidOverrideCommand','Value','0')
+        set(hObject,'String','Hold');
+        set(hObject,'Value',1);
+    end
+end
+
+
+% --- Executes during object creation, after setting all properties.
+function togglebuttonROI1_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to togglebuttonROI1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+if modelIsOpen()
+    
+    switch get_param('targetModel/cam1/centroidOverrideCommand','Value')
+        case '1'
+            set(hObject,'String','Release');
+            set(hObject,'Value',0);
+        case '0'
+            set(hObject,'String','Hold');
+            set(hObject,'Value',1);
+        otherwise %if the value is set to something wierd, override and re-run this function
+            set_param('targetModel/cam1/centroidOverrideCommand','Value','1');
+            togglebuttonROI1_CreateFcn(hObject, eventdata, handles);
+    end
+    
+end
+
+
+% --- Executes during object creation, after setting all properties.
+function togglebuttonROI2_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to togglebuttonROI2 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+if modelIsOpen()
+    
+    switch get_param('targetModel/cam2/centroidOverrideCommand','Value')
+        case '1'
+            set(hObject,'String','Release');
+            set(hObject,'Value',0);
+        case '0'
+            set(hObject,'String','Hold');
+            set(hObject,'Value',1);
+        otherwise %if the value is set to something wierd, override and re-run this function
+            set_param('targetModel/cam2/centroidOverrideCommand','Value','1');
+            togglebuttonROI1_CreateFcn(hObject, eventdata, handles);
+    end
+    
+end
+
+
+% --- Executes during object creation, after setting all properties.
+function togglebuttonROI3A_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to togglebuttonROI3A (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+if modelIsOpen()
+    
+    switch get_param('targetModel/cam3A/centroidOverrideCommand','Value')
+        case '1'
+            set(hObject,'String','Release');
+            set(hObject,'Value',0);
+        case '0'
+            set(hObject,'String','Hold');
+            set(hObject,'Value',1);
+        otherwise %if the value is set to something wierd, override and re-run this function
+            set_param('targetModel/cam3B/centroidOverrideCommand','Value','1');
+            togglebuttonROI1_CreateFcn(hObject, eventdata, handles);
+    end
+    
+end
+
+
+% --- Executes during object creation, after setting all properties.
+function togglebuttonROI3B_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to togglebuttonROI3B (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+if modelIsOpen()
+    
+    switch get_param('targetModel/cam3B/centroidOverrideCommand','Value')
+        case '1'
+            set(hObject,'String','Release');
+            set(hObject,'Value',0);
+        case '0'
+            set(hObject,'String','Hold');
+            set(hObject,'Value',1);
+        otherwise %if the value is set to something wierd, override and re-run this function
+            set_param('targetModel/cam3B/centroidOverrideCommand','Value','1');
+            togglebuttonROI1_CreateFcn(hObject, eventdata, handles);
+    end
+    
+end
+
+
+% --- Executes on button press in pushbutton6.
+function pushbutton6_Callback(hObject, eventdata, handles)
+% hObject    handle to pushbutton6 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+if modelIsOpen()
+   cams = {'cam1','cam2','cam3A','cam3B'};
+   roiHandles = {'ROI1','ROI2','ROI3A','ROI3B'};
+   for i = 1:length(cams)
+       set_param(['targetModel/' cams{i} '/centroidOverrideCommand'],'Value','1');
+       set(eval(['handles.togglebutton' roiHandles{i}]),'Value',1)
+       set(eval(['handles.togglebutton' roiHandles{i}]),'String','Release')
+   end
+end
+
+
+
+
+
+% --- Executes during object creation, after setting all properties.
+function uibuttongroupControlMode_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to uibuttongroupControlMode (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+
+% --- Executes when selected object is changed in uibuttongroupControlMode.
+function uibuttongroupControlMode_SelectionChangedFcn(hObject, eventdata, handles)
+% hObject    handle to the selected object in uibuttongroupControlMode 
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+if modelIsOpen()
+    switch hObject.String
+        case 'Manual'
+            set_param('targetModel/controlMode','Value','0');
+        case 'Closed Loop - Constant Setpoints'
+            set_param('targetModel/phiControl','Value','1');
+            set_param('targetModel/controlMode','Value','1');
+        case 'Closed Loop - Crosswind'
+            set_param('targetModel/phiControl','Value','2');
+            set_param('targetModel/controlMode','Value','1');
+    end
+end
+
+
+% --- Executes when uibuttongroupControlMode is resized.
+function uibuttongroupControlMode_SizeChangedFcn(hObject, eventdata, handles)
+% hObject    handle to uibuttongroupControlMode (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on slider movement.
+function sliderPortSpeed_Callback(hObject, eventdata, handles)
+% hObject    handle to sliderPortSpeed (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'Value') returns position of slider
+%        get(hObject,'Min') and get(hObject,'Max') to determine range of slider
+setMotorSpeed('Port',num2str(get(hObject,'Value')),handles);
+
+% --- Executes during object creation, after setting all properties.
+function sliderPortSpeed_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to sliderPortSpeed (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: slider controls usually have a light gray background.
+if isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor',[.9 .9 .9]);
+end
+
+
+% --- Executes on slider movement.
+function sliderCenterSpeed_Callback(hObject, eventdata, handles)
+% hObject    handle to sliderCenterSpeed (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'Value') returns position of slider
+%        get(hObject,'Min') and get(hObject,'Max') to determine range of slider
+setMotorSpeed('Center',num2str(get(hObject,'Value')),handles);
+
+% --- Executes during object creation, after setting all properties.
+function sliderCenterSpeed_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to sliderCenterSpeed (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: slider controls usually have a light gray background.
+if isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor',[.9 .9 .9]);
+end
+
+
+
+function editPortSpeed_Callback(hObject, eventdata, handles)
+% hObject    handle to editPortSpeed (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of editPortSpeed as text
+%        str2double(get(hObject,'String')) returns contents of editPortSpeed as a double
+% set(hObject,'String',saturate(get(hObject,'String'),-1,1));
+% set(handles.sliderPortSpeed,'Value',str2num(saturate(get(hObject,'String'),0,1)));
+% if modelIsOpen()
+%    set_param('targetModel/portMotorSpeed','Value', saturate(get(hObject,'String'),-1,1));
+%    set(handles.sliderPortSpeed,'Value',str2double(saturate(get(hObject,'String'),-1,1)));
+% end
+setMotorSpeed('Port',get(hObject,'String'),handles);
+
+
+% --- Executes during object creation, after setting all properties.
+function editPortSpeed_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editPortSpeed (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+if modelIsOpen()
+   set(hObject,'String',saturate(get_param('targetModel/portMotorSpeed','Value'),-1,1));
+end
+
+
+
+function editCenterSpeed_Callback(hObject, eventdata, handles)
+% hObject    handle to editCenterSpeed (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of editCenterSpeed as text
+%        str2double(get(hObject,'String')) returns contents of editCenterSpeed as a double
+
+setMotorSpeed('Center',get(hObject,'String'),handles);
+
+% --- Executes during object creation, after setting all properties.
+function editCenterSpeed_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editCenterSpeed (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+if modelIsOpen()
+   set(hObject,'String',saturate(get_param('targetModel/centerMotorSpeed','Value'),-1,1));
+end
+
+
+
+
+% --- Executes on button press in pushbuttonStopAllMotors.
+function pushbuttonStopAllMotors_Callback(hObject, eventdata, handles)
+% hObject    handle to pushbuttonStopAllMotors (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+if modelIsOpen()
+setMotorSpeed('Port','0',handles);
+setMotorSpeed('Starboard','0',handles);
+setMotorSpeed('Center','0',handles);
+end
+
+
+
+
+
+% --- Executes during object creation, after setting all properties.
+function editStarboardSpeed_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editStarboardSpeed (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+if modelIsOpen()
+   set(hObject,'String',saturate(get_param('targetModel/starboardMotorSpeed','Value'),-1,1));
+end
+function editStarboardSpeed_Callback(hObject, eventdata, handles)
+% hObject    handle to editCenterSpeed (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of editCenterSpeed as text
+%        str2double(get(hObject,'String')) returns contents of editCenterSpeed as a double
+
+setMotorSpeed('Starboard',get(hObject,'String'),handles);
+
+% --- Executes during object creation, after setting all properties.
+function sliderStarboardSpeed_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to sliderStarboardSpeed (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: slider controls usually have a light gray background.
+if isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor',[.9 .9 .9]);
+end
+
+
+% --- Executes on slider movement.
+function sliderStarboardSpeed_Callback(hObject, eventdata, handles)
+% hObject    handle to sliderCenterSpeed (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'Value') returns position of slider
+%        get(hObject,'Min') and get(hObject,'Max') to determine range of slider
+setMotorSpeed('Starboard',num2str(get(hObject,'Value')),handles);
+
+% --- Executes on key press with focus on figure1 and none of its controls.
+function figure1_KeyPressFcn(hObject, eventdata, handles)
+% hObject    handle to figure1 (see GCBO)
+% eventdata  structure with the following fields (see MATLAB.UI.FIGURE)
+%	Key: name of the key that was pressed, in lower case
+%	Character: character interpretation of the key(s) that was pressed
+%	Modifier: name(s) of the modifier key(s) (i.e., control, shift) pressed
+% handles    structure with handles and user data (see GUIDATA)
+if modelIsOpen()
+    speed = str2double(get(handles.editHotkeyMotorSpeed,'String'));
+    switch eventdata.Key
+        case 'numpad1'
+            setMotorSpeed('Port',num2str(-speed),handles);
+        case 'numpad2'
+            setMotorSpeed('Center',num2str(-speed),handles);
+        case 'numpad3'
+            setMotorSpeed('Starboard',num2str(-speed),handles);
+        case 'numpad4'
+            setMotorSpeed('Port',num2str(speed),handles);
+        case 'numpad5'
+            setMotorSpeed('Center',num2str(speed),handles);
+        case 'numpad6'
+            setMotorSpeed('Starboard',num2str(speed),handles);
+        case 'numpad7'
+            setMotorSpeed('Port',num2str(-speed),handles);
+            setMotorSpeed('Starboard',num2str(speed),handles);
+        case 'numpad8'
+            setMotorSpeed('Port',num2str(-speed),handles);
+            setMotorSpeed('Center',num2str(-speed),handles);
+            setMotorSpeed('Starboard',num2str(-speed),handles);
+        case 'divide'
+            setMotorSpeed('Port',num2str(speed),handles);
+            setMotorSpeed('Center',num2str(speed),handles);
+            setMotorSpeed('Starboard',num2str(speed),handles);
+        case 'numpad9'
+            setMotorSpeed('Port',num2str(speed),handles);
+            setMotorSpeed('Starboard',num2str(-speed),handles);
+        case 'return'
+            pushbuttonStopAllMotors_Callback(handles.pushbuttonStopAllMotors, eventdata, handles)
+        case 'esc'
+            pushbuttonStopAllMotors_Callback(handles.pushbuttonStopAllMotors, eventdata, handles)
+        case 'del'
+            pushbuttonStopAllMotors_Callback(handles.pushbuttonStopAllMotors, eventdata, handles)
+    end
+end
+
+
+
+function editHotkeyMotorSpeed_Callback(hObject, eventdata, handles)
+% hObject    handle to editHotkeyMotorSpeed (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of editHotkeyMotorSpeed as text
+%        str2double(get(hObject,'String')) returns contents of editHotkeyMotorSpeed as a double
+set(hObject,'String',saturate(get(hObject,'String'),0,1));
+set(handles.sliderHotkeyMotorSpeed,'Value',str2num(saturate(get(hObject,'String'),0,1)));
+
+% --- Executes during object creation, after setting all properties.
+function editHotkeyMotorSpeed_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to editHotkeyMotorSpeed (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+set(hObject,'String','0.5')
+
+
+% --- Executes on slider movement.
+function sliderHotkeyMotorSpeed_Callback(hObject, eventdata, handles)
+% hObject    handle to sliderHotkeyMotorSpeed (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'Value') returns position of slider
+%        get(hObject,'Min') and get(hObject,'Max') to determine range of slider
+set(handles.editHotkeyMotorSpeed,'String',num2str(hObject.Value))
+
+
+% --- Executes during object creation, after setting all properties.
+function sliderHotkeyMotorSpeed_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to sliderHotkeyMotorSpeed (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: slider controls usually have a light gray background.
+if isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor',[.9 .9 .9]);
+end
+set(hObject,'Value',0.5);
+
+function figure1_KeyReleaseFcn(hObject,eventData,handles)
