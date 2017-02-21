@@ -1,6 +1,6 @@
 
 % Change to root path of simulink model
-cd('C:\Users\Doctor V\Desktop\Mitchell\CDC2017Paper\DotTracking_V1.2.0_ClosedLoop');
+cd('C:\Users\Doctor V\Desktop\Water Channel Control2');
 % Add path that contains neccessary functions
 addpath(genpath(pwd))
 
