@@ -8,7 +8,7 @@ function outputMap = loadOutputMap()
 %     'altitudeSetpoint','pitchSetpoint','rollSetpoint'};
 
 % get a list of all blocks in the modell
-blks = find_system('dxpcImMultiTarget_singleimage_CV_euler_finBETA','Type','block');
+blks = find_system('targetModel','Type','block');
 % get a boolean vector where 1 indicates that it's an output, then get
 % those block names
 outs = blks(strcmp(get_param(blks(:),'BlockType'),'Outport'));

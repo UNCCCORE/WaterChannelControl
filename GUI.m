@@ -79,15 +79,15 @@ function uibuttongroup1_SelectionChangedFcn(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 if modelIsOpen()
-    switch eventdata.NewValue.String;
+    switch eventdata.NewValue.String
         case 'Cam 1'
-            set_param('targetModel/imageSource', 'Value', '1');
-        case 'Cam 2'
             set_param('targetModel/imageSource', 'Value', '2');
+        case 'Cam 2'
+            set_param('targetModel/imageSource', 'Value', '0');
         case 'Cam 3A'
-            set_param('targetModel/imageSource', 'Value', '3');
+            set_param('targetModel/imageSource', 'Value', '1');
         case 'Cam 3B'
-            set_param('targetModel/imageSource', 'Value', '4');
+            set_param('targetModel/imageSource', 'Value', '3');
     end
 end
 
@@ -887,7 +887,7 @@ function editTauRoll_Callback(hObject, eventdata, handles)
 % Hints: get(hObject,'String') returns contents of editTauRoll as text
 %        str2double(get(hObject,'String')) returns contents of editTauRoll as a double
 if modelIsOpen()
-   set_param('targetModel/tauRoll','Value',num2str(hObject.String))
+   set_param('targetModel/tauRoll','Gain',num2str(hObject.String))
 end
 
 % --- Executes during object creation, after setting all properties.
@@ -902,7 +902,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 if modelIsOpen()
-    set(hObject,'String',get_param('targetModel/tauRoll','Value'))
+    set(hObject,'String',get_param('targetModel/tauRoll','Gain'))
 end
 
 
@@ -968,7 +968,7 @@ function editTauPitch_Callback(hObject, eventdata, handles)
 % Hints: get(hObject,'String') returns contents of editTauPitch as text
 %        str2double(get(hObject,'String')) returns contents of editTauPitch as a double
 if modelIsOpen()
-   set_param('targetModel/tauPitch','Value',num2str(hObject.String))
+   set_param('targetModel/tauPitch','Gain',num2str(hObject.String))
 end
 
 % --- Executes during object creation, after setting all properties.
@@ -983,7 +983,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 if modelIsOpen()
-    set(hObject,'String',get_param('targetModel/tauPitch','Value'))
+    set(hObject,'String',get_param('targetModel/tauPitch','Gain'))
 end
 
 
@@ -1050,7 +1050,7 @@ function editTauAltitude_Callback(hObject, eventdata, handles)
 % Hints: get(hObject,'String') returns contents of editTauAltitude as text
 %        str2double(get(hObject,'String')) returns contents of editTauAltitude as a double
 if modelIsOpen()
-   set_param('targetModel/tauAltitude','Value',num2str(hObject.String))
+   set_param('targetModel/tauAltitude','Gain',num2str(hObject.String))
 end
 
 % --- Executes during object creation, after setting all properties.
@@ -1065,7 +1065,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 if modelIsOpen()
-    set(hObject,'String',get_param('targetModel/tauAltitude','Value'))
+    set(hObject,'String',get_param('targetModel/tauAltitude','Gain'))
 end
 
 
