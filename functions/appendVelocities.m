@@ -1,8 +1,8 @@
-function tsc =appendVelocities(tsc,flowSpeed);
+function tsc =appendVelocities(tsc)
 dims = size(tsc.x.data);
 
 % Define flow velocity vector
-vxFlow = flowSpeed*ones(dims);
+vxFlow = tsc.flowSpeedCentimetersPerSecond.data;
 vyFlow = zeros(dims);
 vzFlow = zeros(dims);
 
