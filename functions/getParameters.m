@@ -13,7 +13,7 @@ parameters.phiSPPeriod    = 1/parameters.phiSPFrequency;
 parameters.altSP   = str2double(get_param([modelName, 'zDes'],'Value'));
 parameters.thetaSP = str2double(get_param([modelName, 'thetaDes'],'Value'));
 
-parameters.tauAlt = str2double(get_param([modelName, 'tauAltitude'],'Gain'));
+parameters.tauAlt = str2double(get_param([modelName, 'tauAltitude'],'Value'));
 parameters.kdAlt  = str2double(get_param([modelName, 'kdAltitude'] ,'Gain'));
 parameters.kpAlt  = str2double(get_param([modelName, 'kpAltitude'] ,'Gain'));
 

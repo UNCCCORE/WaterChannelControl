@@ -117,7 +117,7 @@ function editROI1H_Callback(hObject, eventdata, handles)
 
 % Hints: get(hObject,'String') returns contents of editROI1H as text
 %        str2double(get(hObject,'String')) returns contents of editROI1H as a double
-num = str2num(hObject.String{:});
+num = str2num(hObject.String);
 if ~isempty(num) && modelIsOpen()
     set_param('targetModel/cam1/xCentroidOverride','Value',num2str(num));
 end
@@ -147,7 +147,7 @@ function editROI2H_Callback(hObject, eventdata, handles)
 % Hints: get(hObject,'String') returns contents of editROI2H as text
 %        str2double(get(hObject,'String')) returns contents of editROI2H as a double
 
-num = str2num(hObject.String{:});
+num = str2num(hObject.String);
 if ~isempty(num) && modelIsOpen()
     set_param('targetModel/cam2/xCentroidOverride','Value',num2str(num));
 end
@@ -176,7 +176,7 @@ function editROI3AH_Callback(hObject, eventdata, handles)
 % Hints: get(hObject,'String') returns contents of editROI3AH as text
 %        str2double(get(hObject,'String')) returns contents of editROI3AH as a double
 
-num = str2num(hObject.String{:});
+num = str2num(hObject.String);
 if ~isempty(num) && modelIsOpen()
     set_param('targetModel/cam3A/xCentroidOverride','Value',num2str(num));
 end
@@ -203,7 +203,7 @@ function editROI3BH_Callback(hObject, eventdata, handles)
 
 % Hints: get(hObject,'String') returns contents of editROI3BH as text
 %        str2double(get(hObject,'String')) returns contents of editROI3BH as a double
-num = str2num(hObject.String{:});
+num = str2num(hObject.String);
 if ~isempty(num) && modelIsOpen()
     set_param('targetModel/cam3B/xCentroidOverride','Value',num2str(num));
 end
@@ -231,7 +231,7 @@ function editROI1V_Callback(hObject, eventdata, handles)
 
 % Hints: get(hObject,'String') returns contents of editROI1V as text
 %        str2double(get(hObject,'String')) returns contents of editROI1V as a double
-num = str2num(hObject.String{:});
+num = str2num(hObject.String);
 if ~isempty(num) && modelIsOpen()
     set_param('targetModel/cam1/yCentroidOverride','Value',num2str(num));
 end
@@ -259,7 +259,7 @@ function editROI2V_Callback(hObject, eventdata, handles)
 
 % Hints: get(hObject,'String') returns contents of editROI2V as text
 %        str2double(get(hObject,'String')) returns contents of editROI2V as a double
-num = str2num(hObject.String{:});
+num = str2num(hObject.String);
 if ~isempty(num) && modelIsOpen()
     set_param('targetModel/cam2/yCentroidOverride','Value',num2str(num));
 end
@@ -287,7 +287,7 @@ function editROI3AV_Callback(hObject, eventdata, handles)
 
 % Hints: get(hObject,'String') returns contents of editROI3AV as text
 %        str2double(get(hObject,'String')) returns contents of editROI3AV as a double
-num = str2num(hObject.String{:});
+num = str2num(hObject.String);
 if ~isempty(num) && modelIsOpen()
     set_param('targetModel/cam3A/yCentroidOverride','Value',num2str(num));
 end
@@ -315,7 +315,7 @@ function edit3BV_Callback(hObject, eventdata, handles)
 
 % Hints: get(hObject,'String') returns contents of edit3BV as text
 %        str2double(get(hObject,'String')) returns contents of edit3BV as a double
-num = str2num(hObject.String{:});
+num = str2num(hObject.String);
 if ~isempty(num) && modelIsOpen()
     set_param('targetModel/cam3B/yCentroidOverride','Value',num2str(num));
 end
@@ -1065,7 +1065,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 if modelIsOpen()
-    set(hObject,'String',get_param('targetModel/tauAltitude','Gain'))
+    set(hObject,'String',get_param('targetModel/tauAltitude','Value'))
 end
 
 
