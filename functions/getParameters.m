@@ -18,11 +18,11 @@ parameters.kdAlt  = str2double(get_param([modelName, 'kdAltitude'] ,'Gain'));
 parameters.kpAlt  = str2double(get_param([modelName, 'kpAltitude'] ,'Gain'));
 
 
-parameters.tauTheta = str2double(get_param([modelName, 'tauPitch'],'Gain'));
+parameters.tauTheta = str2double(get_param([modelName, 'tauPitch'],'Value'));
 parameters.kdTheta  = str2double(get_param([modelName, 'kdPitch'] ,'Gain'));
 parameters.kpTheta  = str2double(get_param([modelName, 'kpPitch'] ,'Gain'));
 
-parameters.tauPhi = str2double(get_param([modelName, 'tauRoll'],'Gain'));
+parameters.tauPhi = str2double(get_param([modelName, 'tauRoll'],'Value'));
 parameters.kdPhi  = str2double(get_param([modelName, 'kdRoll'] ,'Gain'));
 parameters.kpPh   = str2double(get_param([modelName, 'kpRoll'] ,'Gain'));
 

@@ -887,7 +887,7 @@ function editTauRoll_Callback(hObject, eventdata, handles)
 % Hints: get(hObject,'String') returns contents of editTauRoll as text
 %        str2double(get(hObject,'String')) returns contents of editTauRoll as a double
 if modelIsOpen()
-   set_param('targetModel/tauRoll','Gain',num2str(hObject.String))
+   set_param('targetModel/tauRoll','Value',num2str(hObject.String))
 end
 
 % --- Executes during object creation, after setting all properties.
@@ -902,7 +902,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 if modelIsOpen()
-    set(hObject,'String',get_param('targetModel/tauRoll','Gain'))
+    set(hObject,'String',get_param('targetModel/tauRoll','Value'))
 end
 
 
@@ -968,7 +968,7 @@ function editTauPitch_Callback(hObject, eventdata, handles)
 % Hints: get(hObject,'String') returns contents of editTauPitch as text
 %        str2double(get(hObject,'String')) returns contents of editTauPitch as a double
 if modelIsOpen()
-   set_param('targetModel/tauPitch','Gain',num2str(hObject.String))
+   set_param('targetModel/tauPitch','Value',num2str(hObject.String))
 end
 
 % --- Executes during object creation, after setting all properties.
@@ -983,7 +983,7 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 if modelIsOpen()
-    set(hObject,'String',get_param('targetModel/tauPitch','Gain'))
+    set(hObject,'String',get_param('targetModel/tauPitch','Value'))
 end
 
 
