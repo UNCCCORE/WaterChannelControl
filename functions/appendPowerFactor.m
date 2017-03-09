@@ -1,4 +1,4 @@
-function tsc = appendPowerFactor(tsc,flowSpeed);
+function tsc = appendPowerFactor(tsc)
 
 vax = tsc.vxFlow.data - tsc.vxFiltered.data;
 vay = tsc.vyFlow.data - tsc.vyFiltered.data;

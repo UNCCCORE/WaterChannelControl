@@ -1,11 +1,7 @@
 function outputMap = loadOutputMap()
+% this function names the timeseries according to the label on the output
+% block
 
-% 
-% outputMap = {'roll','pitch','yaw',...
-%     'errorAltitude','errorPitch','errorRoll',...
-%     'x','y','z',...
-%     'rollControllerCommand','pitchControllerCommand','altitudeControllerCommand',...
-%     'altitudeSetpoint','pitchSetpoint','rollSetpoint'};
 
 % get a list of all blocks in the modell
 blks = find_system('targetModel','Type','block');

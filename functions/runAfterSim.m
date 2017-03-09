@@ -1,3 +1,7 @@
+clc
+
+fprintf('\nTarget model stopped.\nExecuting data parsing and post processing.\n')
+
 fprintf('\nCompiling timeseries collection from raw data.\n')
 tsc = compileTimeseriesCollection(tg);
 
@@ -11,7 +15,7 @@ fprintf('\nFiltering velocities.\n')
 tsc = appendFilteredSignals(tsc);
 
 fprintf('\nCalculating power factor.\n')
-tsc = appendPowerFactor(tsc,flowSpeed);
+tsc = appendPowerFactor(tsc);
 
 fileName =strrep(strrep(strrep(datestr(now),':',''),' ','_'),'-','');
 fprintf('\nSaving data as .\\data\\%s.\n',fileName)
