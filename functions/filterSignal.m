@@ -3,7 +3,7 @@ function filteredSignal = filterSignal(signal)
 numPts = 10; % 10 points before given time and 10 points after given time;
 filteredData=zeros(size(signal.data));
 
-for i = 1:length(signal.data);
+for i = 1:length(signal.data)
     startIndex = i-numPts;
     endIndex   = i+numPts;
     if startIndex<1
