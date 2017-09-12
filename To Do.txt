@@ -1,0 +1,36 @@
+Ideas for future features/improvements:
+
+Change callback which retrieves constants/gains after simulation.
+Ideally this should just go in and find all the constant/gain
+blocks, get their values and store them.  The code for this is
+already written in the function getParameters2.m.  I just have
+to change the callback to actually use that function.  Waiting
+until I finish this sequence of experiments.
+
+Implement a time-since-last-control-mode-change readout.
+This would be useful for determining how long you've been in
+crosswind mode (in case you forgot, like I often do).  It would
+basically be a re-settable clock block.
+
+Change all image processing blocks to instances of a library block.
+This means changes would be applied uniformly across all blocks.
+This would be a bit of work though.
+
+Hide a bunch of the labels.
+
+Implement digital readout of position and orientation on target machine.
+
+Implement closed loop control of flow speed (obviously a big,
+long-term project).
+
+Edit for variable-naming consistency.  (camel case + descriptors, 
+not variables)
+
+There seems to be an error whereby yaw causes the system to measure
+roll.  Not sure how to fix that with the current implementation.
+My theoretical version based on projections of lines wouldn't have
+this problem though.
+
+Correction for Snells law?
+
+Correction for lens distortion?
