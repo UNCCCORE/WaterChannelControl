@@ -5,7 +5,7 @@ if ~isempty(tg.OutputLog)
     fprintf('\nCompiling timeseries collection from raw data.\n')
     tsc = compileTimeseriesCollection(tg);
     
-    fprintf('\nRetrieving constant parameters from model.\n')
+    fprintf('\nRetrieving constant and gain parameters from model.\n')
     parameters = getParameters();
     
     fprintf('\nCalculating velocities from position data.\n')
@@ -14,10 +14,10 @@ if ~isempty(tg.OutputLog)
     fprintf('\nFiltering velocities.\n')
     tsc = appendFilteredSignals(tsc);
     
-    fprintf('\nCalculating power factor.\n')
+    fprintf('\nCalculating power factor and appending signal to tsc.\n')
     tsc = appendPowerFactor(tsc);
     
-    fileName =strrep(strrep(strrep(datestr(now),':',''),' ','_'),'-','');
+    fileName =  strrep(strrep(strrep(datestr(now),':',''),' ','_'),'-','');
     fprintf('\nSaving data as .\\data\\%s.\n',fileName)
     saveData
     fprintf('\nDone.\n')
